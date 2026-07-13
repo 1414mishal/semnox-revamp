@@ -6,44 +6,44 @@ export const contactBody = interiorHero({
   title: "Talk to a human. Get a real answer.",
   lede: "Sales, support, partnerships, or a live demo. Pick a channel and we will get back to you fast, usually within two working days.",
   image: "images/hero-fec.jpg",
-  tint: "#f06a18",
+  tint: "#e8631a",
 }) + `
     <section class="bg-[#111213] py-20 sm:py-28">
       <div class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          <a href="mailto:corp.sales@semnox.com" data-reveal class="group rounded-md border border-white/15 bg-[#191a1b] p-6 transition duration-300 hover:-translate-y-1 hover:border-[#ff6a1a]/70">
-            <i data-lucide="mail" class="h-7 w-7 text-[#ff6a1a]"></i>
+          <a href="mailto:corp.sales@semnox.com" data-reveal class="group rounded-md border border-white/15 bg-[#191a1b] p-6 transition duration-300 hover:-translate-y-1 hover:border-[#f26a1e]/70">
+            <i data-lucide="mail" class="h-7 w-7 text-[#f26a1e]"></i>
             <h3 class="mt-5 text-lg font-medium">Sales</h3>
             <p class="mt-1 break-all text-sm text-white/55">corp.sales@semnox.com</p>
           </a>
-          <a href="tel:+918244255888" data-reveal class="group rounded-md border border-white/15 bg-[#191a1b] p-6 transition duration-300 hover:-translate-y-1 hover:border-[#ff6a1a]/70">
-            <i data-lucide="phone" class="h-7 w-7 text-[#ff6a1a]"></i>
+          <a href="tel:+918244255888" data-reveal class="group rounded-md border border-white/15 bg-[#191a1b] p-6 transition duration-300 hover:-translate-y-1 hover:border-[#f26a1e]/70">
+            <i data-lucide="phone" class="h-7 w-7 text-[#f26a1e]"></i>
             <h3 class="mt-5 text-lg font-medium">Call us</h3>
             <p class="mt-1 text-sm text-white/55">+91 824 425 5888</p>
           </a>
-          <a href="https://wa.me/919620233236" target="_blank" rel="noopener" data-reveal class="group rounded-md border border-white/15 bg-[#191a1b] p-6 transition duration-300 hover:-translate-y-1 hover:border-[#ff6a1a]/70">
-            <i data-lucide="message-circle" class="h-7 w-7 text-[#ff6a1a]"></i>
+          <a href="https://wa.me/919620233236" target="_blank" rel="noopener" data-reveal class="group rounded-md border border-white/15 bg-[#191a1b] p-6 transition duration-300 hover:-translate-y-1 hover:border-[#f26a1e]/70">
+            <i data-lucide="message-circle" class="h-7 w-7 text-[#f26a1e]"></i>
             <h3 class="mt-5 text-lg font-medium">WhatsApp</h3>
             <p class="mt-1 text-sm text-white/55">+91 962 023 3236</p>
           </a>
-          <a href="mailto:careers@semnox.com" data-reveal class="group rounded-md border border-white/15 bg-[#191a1b] p-6 transition duration-300 hover:-translate-y-1 hover:border-[#ff6a1a]/70">
-            <i data-lucide="briefcase" class="h-7 w-7 text-[#ff6a1a]"></i>
+          <a href="mailto:careers@semnox.com" data-reveal class="group rounded-md border border-white/15 bg-[#191a1b] p-6 transition duration-300 hover:-translate-y-1 hover:border-[#f26a1e]/70">
+            <i data-lucide="briefcase" class="h-7 w-7 text-[#f26a1e]"></i>
             <h3 class="mt-5 text-lg font-medium">Careers</h3>
             <p class="mt-1 break-all text-sm text-white/55">careers@semnox.com</p>
           </a>
         </div>
 
         <div data-reveal class="mt-6 grid gap-4 sm:grid-cols-2">
-          <div class="rounded-md border border-[#ff6a1a]/50 bg-[#ff6a1a]/10 p-6">
+          <div class="rounded-md border border-[#f26a1e]/50 bg-[#f26a1e]/10 p-6">
             <div class="flex items-center gap-3">
-              <i data-lucide="siren" class="h-6 w-6 text-[#ff6a1a]"></i>
+              <i data-lucide="siren" class="h-6 w-6 text-[#f26a1e]"></i>
               <h3 class="text-lg font-medium">Critical support, Americas</h3>
             </div>
             <p class="mt-2 text-sm text-white/60">+1 610 458 5110 · around the clock</p>
           </div>
-          <div class="rounded-md border border-[#ff6a1a]/50 bg-[#ff6a1a]/10 p-6">
+          <div class="rounded-md border border-[#f26a1e]/50 bg-[#f26a1e]/10 p-6">
             <div class="flex items-center gap-3">
-              <i data-lucide="siren" class="h-6 w-6 text-[#ff6a1a]"></i>
+              <i data-lucide="siren" class="h-6 w-6 text-[#f26a1e]"></i>
               <h3 class="text-lg font-medium">Critical support, rest of world</h3>
             </div>
             <p class="mt-2 text-sm text-white/60">+91 808 873 6669 · around the clock</p>
@@ -69,7 +69,7 @@ ${offices.map(o => `          <article data-reveal class="rounded-md border bord
       </div>
     </section>
 
-    <section class="bg-[#ff6a1a] py-20 text-black sm:py-28">
+    <section class="bg-[#f26a1e] py-20 text-black sm:py-28">
       <div data-reveal class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <p class="text-sm text-black/55">Prefer email?</p>
         <div class="mt-5 flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
@@ -120,7 +120,7 @@ ${jobs.map(j => `          <article data-reveal class="grid gap-4 py-8 lg:grid-c
               <span class="rounded-full border border-white/20 px-3 py-1.5">${j.mode}</span>
             </div>
             <div class="lg:col-span-2 lg:text-right">
-              <a href="mailto:careers@semnox.com?subject=Application: ${j.title}" class="group inline-flex min-h-11 items-center gap-2 text-sm font-medium text-[#ff6a1a] transition-colors hover:text-white">
+              <a href="mailto:careers@semnox.com?subject=Application: ${j.title}" class="group inline-flex min-h-11 items-center gap-2 text-sm font-medium text-[#f26a1e] transition-colors hover:text-white">
                 Apply <i data-lucide="arrow-right" class="h-4 w-4 transition-transform group-hover:translate-x-1"></i>
               </a>
             </div>
@@ -128,7 +128,7 @@ ${jobs.map(j => `          <article data-reveal class="grid gap-4 py-8 lg:grid-c
         </div>
         <div data-reveal class="mt-10 rounded-md border border-white/15 bg-[#191a1b] p-8">
           <p class="max-w-3xl text-lg leading-relaxed text-white/60">
-            Don't see your role? Send your resume and a covering letter to <a href="mailto:careers@semnox.com" class="font-medium text-[#ff6a1a] hover:underline">careers@semnox.com</a> anyway. We keep strong profiles on file for up to a year and reach out when the right seat opens.
+            Don't see your role? Send your resume and a covering letter to <a href="mailto:careers@semnox.com" class="font-medium text-[#f26a1e] hover:underline">careers@semnox.com</a> anyway. We keep strong profiles on file for up to a year and reach out when the right seat opens.
           </p>
         </div>
       </div>

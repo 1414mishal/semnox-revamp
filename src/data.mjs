@@ -98,16 +98,16 @@ export const offices = [
 ];
 
 export const blogPosts = [
-  { title: "Enhancing Security for Park and FEC Operators", date: "12 Apr 2024", cat: "Security", mins: "6 min", img: "images/vr-ar.jpg" },
-  { title: "Semnox's Year in Review: Achievements, Innovations, and Industry Impact", date: "25 Dec 2023", cat: "Company", mins: "8 min", img: "images/hero-alt.jpg" },
-  { title: "How to Anticipate Your Guest's Needs and Deliver Delight Consistently", date: "19 May 2021", cat: "Guest Experience", mins: "7 min", img: "images/kids-play.jpg" },
-  { title: "Cross-Sell and Up-Sell: Opportunities for FEC and Park Operators", date: "12 May 2021", cat: "Revenue", mins: "6 min", img: "images/fec.jpg" },
-  { title: "Parafait Klaimprize: A Cutting-Edge Redemption Kiosk for Arcades", date: "5 May 2021", cat: "Product", mins: "4 min", img: "images/trampoline.jpg" },
-  { title: "FEC Digital Transformation: The Complete Guide", date: "30 Apr 2021", cat: "Guides", mins: "12 min", img: "images/foodcourt.jpg" },
-  { title: "Making Data Work for You: Why Visualization Is Key", date: "22 Apr 2021", cat: "Analytics", mins: "5 min", img: "images/museum.jpg" },
-  { title: "How to Prolong the Life of Your Theme Park Assets", date: "21 Apr 2021", cat: "Operations", mins: "6 min", img: "images/theme-parks.jpg" },
-  { title: "Time Keeping with Radian: The RFID Wristband for Trampoline Parks", date: "20 Apr 2021", cat: "Product", mins: "4 min", img: "images/water-parks.jpg" },
-  { title: "Theme Park Digital Transformation: The Complete Guide", date: "30 Mar 2021", cat: "Guides", mins: "11 min", img: "images/aquarium.jpg" },
-  { title: "Party Reservations: Why You Need Comprehensive Software", date: "21 Sep 2021", cat: "Operations", mins: "5 min", img: "images/restaurant.jpg" },
-  { title: "The Benefits of Cashless RFID Ticketing at Amusement Parks", date: "10 Jul 2021", cat: "Cashless", mins: "6 min", img: "images/hero-park.jpg" },
+  { title: "Enhancing Security for Park and FEC Operators", url: "https://www.semnox.com/enhancing-security-for-park-and-fec-operators/", date: "12 Apr 2024", cat: "Security", mins: "6 min", img: "images/vr-ar.jpg" },
+  { title: "Semnox's Year in Review: Achievements, Innovations, and Industry Impact", url: "https://www.semnox.com/semnoxs-year-2023-in-review/", date: "25 Dec 2023", cat: "Company", mins: "8 min", img: "images/hero-alt.jpg" },
+  { title: "How to Anticipate Your Guest's Needs and Deliver Delight Consistently", url: "https://www.semnox.com/crm-software-for-entertainment-venues-2/", date: "19 May 2021", cat: "Guest Experience", mins: "7 min", img: "images/kids-play.jpg" },
+  { title: "Cross-Sell and Up-Sell: Opportunities for FEC and Park Operators", url: "https://www.semnox.com/cross-sell-and-up-sell-for-fec-and-park-operators/", date: "12 May 2021", cat: "Revenue", mins: "6 min", img: "images/fec.jpg" },
+  { title: "Parafait Klaimprize: A Cutting-Edge Redemption Kiosk for Arcades", url: "https://www.semnox.com/redemption-kiosk-for-arcades/", date: "5 May 2021", cat: "Product", mins: "4 min", img: "images/trampoline.jpg" },
+  { title: "FEC Digital Transformation: The Complete Guide", url: "https://www.semnox.com/fec-digital-transformation-guide/", date: "30 Apr 2021", cat: "Guides", mins: "12 min", img: "images/foodcourt.jpg" },
+  { title: "Making Data Work for You: Why Visualization Is Key", url: "https://www.semnox.com/data-visualization-benefits/", date: "22 Apr 2021", cat: "Analytics", mins: "5 min", img: "images/museum.jpg" },
+  { title: "How to Prolong the Life of Your Theme Park Assets", url: "https://www.semnox.com/parafait-maintenance-module/", date: "21 Apr 2021", cat: "Operations", mins: "6 min", img: "images/theme-parks.jpg" },
+  { title: "Time Keeping with Radian: The RFID Wristband for Trampoline Parks", url: "https://www.semnox.com/radian-wristband-timekeeping/", date: "20 Apr 2021", cat: "Product", mins: "4 min", img: "images/water-parks.jpg" },
+  { title: "Theme Park Digital Transformation: The Complete Guide", url: "https://www.semnox.com/theme-park-digital-transformation/", date: "30 Mar 2021", cat: "Guides", mins: "11 min", img: "images/aquarium.jpg" },
+  { title: "Centralized Inventory Management: Why Park and FEC Chains Need It", date: "2022", cat: "Operations", mins: "5 min", img: "images/restaurant.jpg", url: "https://www.semnox.com/web-based-inventory-management/" },
+  { title: "How RFID Technology is Transforming Ticketing", date: "2021", cat: "Cashless", mins: "6 min", img: "images/hero-park.jpg", url: "https://www.semnox.com/rfid-ticketing-amusement-water-parks/" },
 ];

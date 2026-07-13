@@ -6,14 +6,14 @@ export const testimonialsBody = interiorHero({
   title: "Operators say it better than we ever could.",
   lede: "From arcade owners to franchise presidents, here is what running on Semnox actually feels like.",
   image: "images/kids-play.jpg",
-  tint: "#f06a18",
+  tint: "#e8631a",
   links: [{ href: "contact-us.html", label: "Join them", primary: true }],
 }) + `
     <section class="bg-[#111213] py-20 sm:py-28">
       <div class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <div class="columns-1 gap-4 sm:columns-2 lg:columns-3">
-${testimonials.map(t => `          <figure data-reveal class="mb-4 break-inside-avoid rounded-md border border-white/15 bg-[#191a1b] p-6 transition-colors hover:border-[#ff6a1a]/60">
-            <i data-lucide="quote" class="h-6 w-6 text-[#ff6a1a]"></i>
+${testimonials.map(t => `          <figure data-reveal class="mb-4 break-inside-avoid rounded-md border border-white/15 bg-[#191a1b] p-6 transition-colors hover:border-[#f26a1e]/60">
+            <i data-lucide="quote" class="h-6 w-6 text-[#f26a1e]"></i>
             <blockquote class="mt-4 text-lg font-medium leading-snug tracking-tight">"${t.quote}"</blockquote>
             <figcaption class="mt-5 border-t border-white/10 pt-4">
               <p class="text-sm font-medium">${t.name}</p>
@@ -24,7 +24,7 @@ ${testimonials.map(t => `          <figure data-reveal class="mb-4 break-inside-
       </div>
     </section>
 
-    <section class="bg-[#ff6a1a] py-20 text-black sm:py-28">
+    <section class="bg-[#f26a1e] py-20 text-black sm:py-28">
       <div data-reveal class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
           <h2 class="max-w-4xl text-5xl font-medium leading-[0.95] tracking-tight sm:text-7xl">Your quote could be next.</h2>
@@ -52,15 +52,15 @@ export const blogBody = interiorHero({
           <span class="text-lg text-white/45">(${blogPosts.length})</span>
         </div>
         <div class="mt-8 grid gap-x-5 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
-${blogPosts.map(p => `          <a href="https://www.semnox.com/blog/" target="_blank" rel="noopener" data-reveal class="group focus:outline-none focus:ring-2 focus:ring-[#ff6a1a] focus:ring-offset-4 focus:ring-offset-[#111213]">
+${blogPosts.map(p => `          <a href="${p.url}" target="_blank" rel="noopener" data-reveal class="group focus:outline-none focus:ring-2 focus:ring-[#f26a1e] focus:ring-offset-4 focus:ring-offset-[#111213]">
             <div class="aspect-[4/3] overflow-hidden rounded-md bg-white/10">
               <img src="${p.img}" alt="" loading="lazy" class="h-full w-full object-cover grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0">
             </div>
             <p class="mt-4 text-xs text-white/40">${p.cat} · ${p.date} · ${p.mins}</p>
-            <h3 class="mt-2 text-lg font-medium leading-snug transition-colors group-hover:text-[#ff6a1a]">${p.title}</h3>
+            <h3 class="mt-2 text-lg font-medium leading-snug transition-colors group-hover:text-[#f26a1e]">${p.title}</h3>
           </a>`).join("\n")}
         </div>
-        <p data-reveal class="mt-12 text-sm text-white/40">Full articles live on the Semnox blog archive. Each card opens the original post library.</p>
+        <p data-reveal class="mt-12 text-sm text-white/40">Each card opens the full article on the Semnox blog.</p>
       </div>
     </section>`;
 
@@ -76,7 +76,7 @@ export const newsBody = interiorHero({
   title: "Where we've been. Where you'll find us next.",
   lede: "Product launches, partnerships, and the trade show calendar. Semnox exhibits at the industry's biggest events every year.",
   image: "images/hero-alt.jpg",
-  tint: "#f06a18",
+  tint: "#e8631a",
 }) + `
     <section class="bg-[#111213] py-20 sm:py-28">
       <div class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
@@ -86,7 +86,7 @@ export const newsBody = interiorHero({
         <div class="divide-y divide-white/15">
 ${newsItems.map(n => `          <article data-reveal class="grid gap-3 py-8 sm:grid-cols-[8rem_1fr] sm:gap-8">
             <div>
-              <p class="text-sm text-[#ff6a1a]">${n.date}</p>
+              <p class="text-sm text-[#f26a1e]">${n.date}</p>
               <p class="mt-1 text-xs uppercase tracking-widest text-white/35">${n.tag}</p>
             </div>
             <div>
@@ -160,7 +160,7 @@ export const csrBody = interiorHero({
     <section class="bg-[#111213] py-20 sm:py-28">
       <div class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <div data-reveal class="border-b border-white/15 pb-10">
-          <p class="text-sm text-[#ff6a1a]">Focus areas</p>
+          <p class="text-sm text-[#f26a1e]">Focus areas</p>
           <h2 class="mt-3 text-4xl font-medium tracking-tight sm:text-5xl">Nine commitments.</h2>
         </div>
         <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -174,14 +174,14 @@ ${[
   { icon: "castle", name: "Heritage and Culture", copy: "Restoration projects and promotion of traditional arts." },
   { icon: "medal", name: "Sports", copy: "Training support for rural, Olympic, and Paralympic athletes." },
   { icon: "shield", name: "Armed Forces", copy: "Assistance for veterans and war widows." },
-].map(c => `          <article data-reveal class="rounded-md border border-white/15 bg-[#191a1b] p-6 transition duration-300 hover:-translate-y-1 hover:border-[#ff6a1a]/60">
-            <i data-lucide="${c.icon}" class="h-7 w-7 text-[#ff6a1a]"></i>
+].map(c => `          <article data-reveal class="rounded-md border border-white/15 bg-[#191a1b] p-6 transition duration-300 hover:-translate-y-1 hover:border-[#f26a1e]/60">
+            <i data-lucide="${c.icon}" class="h-7 w-7 text-[#f26a1e]"></i>
             <h3 class="mt-5 text-xl font-medium tracking-tight">${c.name}</h3>
             <p class="mt-2 text-sm leading-relaxed text-white/55">${c.copy}</p>
           </article>`).join("\n")}
         </div>
         <div data-reveal class="mt-14 rounded-md border border-white/15 p-8">
-          <p class="text-sm text-[#ff6a1a]">Governance</p>
+          <p class="text-sm text-[#f26a1e]">Governance</p>
           <p class="mt-3 max-w-3xl text-xl font-medium leading-snug tracking-tight">The CSR committee is chaired at the very top: Iqbal Mohammad, Kiran Karanki, and Umesh Prabhu personally steer where the effort goes.</p>
         </div>
       </div>
@@ -192,12 +192,12 @@ export const caseStudiesBody = interiorHero({
   title: "Proof, in production.",
   lede: "Real venues, real numbers, real operators. How the platform performs when the gates open.",
   image: "images/case-grs.jpg",
-  tint: "#f06a18",
+  tint: "#e8631a",
 }) + `
     <section class="bg-[#111213] py-20 sm:py-28">
       <div class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <div class="grid gap-x-5 gap-y-14 lg:grid-cols-12">
-          <a href="https://www.semnox.com/portfolios/grs-fantasy-park/" target="_blank" rel="noopener" data-reveal class="group block focus:outline-none focus:ring-2 focus:ring-[#ff6a1a] focus:ring-offset-4 focus:ring-offset-[#111213] lg:col-span-7">
+          <a href="https://www.semnox.com/portfolios/grs-fantasy-park/" target="_blank" rel="noopener" data-reveal class="group block focus:outline-none focus:ring-2 focus:ring-[#f26a1e] focus:ring-offset-4 focus:ring-offset-[#111213] lg:col-span-7">
             <div class="relative aspect-[4/3] overflow-hidden rounded-md bg-[#191a1b]">
               <img src="images/case-grs.jpg" alt="GRS Fantasy Park" loading="lazy" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]">
               <span class="absolute right-4 top-4 inline-flex items-center gap-2 rounded-md bg-black px-3 py-2 text-xs text-white opacity-0 transition-opacity group-hover:opacity-100">Read case study <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
@@ -210,7 +210,7 @@ export const caseStudiesBody = interiorHero({
               <span class="text-sm text-white/45">Parks</span>
             </div>
           </a>
-          <a href="https://www.semnox.com/portfolios/ifs-qatar/" target="_blank" rel="noopener" data-reveal class="group block self-end focus:outline-none focus:ring-2 focus:ring-[#ff6a1a] focus:ring-offset-4 focus:ring-offset-[#111213] lg:col-span-5 lg:pt-24">
+          <a href="https://www.semnox.com/portfolios/ifs-qatar/" target="_blank" rel="noopener" data-reveal class="group block self-end focus:outline-none focus:ring-2 focus:ring-[#f26a1e] focus:ring-offset-4 focus:ring-offset-[#111213] lg:col-span-5 lg:pt-24">
             <div class="relative aspect-square overflow-hidden rounded-md bg-[#191a1b]">
               <img src="images/case-ifs.jpg" alt="IFS Qatar" loading="lazy" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]">
               <span class="absolute right-4 top-4 inline-flex items-center gap-2 rounded-md bg-black px-3 py-2 text-xs text-white opacity-0 transition-opacity group-hover:opacity-100">Read case study <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
@@ -227,7 +227,7 @@ export const caseStudiesBody = interiorHero({
       </div>
     </section>
 
-    <section class="bg-[#ff6a1a] py-20 text-black sm:py-28">
+    <section class="bg-[#f26a1e] py-20 text-black sm:py-28">
       <div data-reveal class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
           <h2 class="max-w-4xl text-5xl font-medium leading-[0.95] tracking-tight sm:text-7xl">Want results like these?</h2>

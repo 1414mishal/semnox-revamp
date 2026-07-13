@@ -81,7 +81,7 @@ document.querySelectorAll("[data-dropdown]").forEach(dd => {
   document.addEventListener("keydown", e => { if (e.key === "Escape") setOpen(false); });
 });
 
-// Hero entrance
+// Hero entrance: lines rise out of a clipped mask, the way print pulls off a press.
 const heroElements = [...document.querySelectorAll("[data-hero]")];
 if (reducedMotion) {
   heroElements.forEach(el => el.classList.remove("translate-y-6", "opacity-0"));
@@ -89,12 +89,19 @@ if (reducedMotion) {
   heroElements.forEach((el, i) => {
     el.animate(
       [
-        { opacity: 0, transform: "translateY(24px)", filter: "blur(4px)" },
-        { opacity: 1, transform: "translateY(0)", filter: "blur(0)" }
+        { opacity: 1, transform: "translateY(1.1em)", clipPath: "inset(100% 0 -0.2em 0)" },
+        { opacity: 1, transform: "translateY(0)", clipPath: "inset(-0.2em 0 -0.2em 0)" }
       ],
-      { duration: 760, delay: 120 + i * 105, easing: "cubic-bezier(.22,.61,.36,1)", fill: "forwards" }
+      { duration: 850, delay: 160 + i * 140, easing: "cubic-bezier(.19,1,.22,1)", fill: "forwards" }
     );
   });
+  const heroImage = document.querySelector("[data-hero-image]");
+  if (heroImage) {
+    heroImage.animate(
+      [{ transform: "scale(1.07)" }, { transform: "scale(1)" }],
+      { duration: 2400, easing: "cubic-bezier(.22,.61,.36,1)", fill: "forwards" }
+    );
+  }
 }
 
 // Scroll reveal
@@ -146,25 +153,22 @@ document.querySelectorAll("[data-accordion]").forEach(group => {
   });
 });
 
-// Simple counters for stats
-const counters = [...document.querySelectorAll("[data-count]")];
-if (counters.length) {
-  const counterObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      const el = entry.target;
-      const target = parseInt(el.dataset.count, 10);
-      const suffix = el.dataset.suffix || "";
-      const duration = 1200;
-      const start = performance.now();
-      const tick = now => {
-        const p = Math.min((now - start) / duration, 1);
-        el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3))).toLocaleString() + suffix;
-        if (p < 1) requestAnimationFrame(tick);
-      };
-      reducedMotion ? (el.textContent = target.toLocaleString() + suffix) : requestAnimationFrame(tick);
-      counterObserver.unobserve(el);
+// Live "now" line in the scoreboard: venues never sleep somewhere on earth.
+const nowLine = document.querySelector("[data-now-line]");
+if (nowLine) {
+  const zones = [
+    ["Auckland", "Pacific/Auckland"], ["Sydney", "Australia/Sydney"], ["Singapore", "Asia/Singapore"],
+    ["Mangalore", "Asia/Kolkata"], ["Dubai", "Asia/Dubai"], ["Reading", "Europe/London"],
+    ["Dallas", "America/Chicago"], ["Lima", "America/Lima"],
+  ];
+  const render = () => {
+    const open = zones.filter(([, tz]) => {
+      const h = parseInt(new Intl.DateTimeFormat("en", { hour: "numeric", hour12: false, timeZone: tz }).format(new Date()), 10);
+      return h >= 10 && h < 23;
     });
-  }, { threshold: 0.4 });
-  counters.forEach(el => counterObserver.observe(el));
+    const sample = open.length ? open[Math.floor(Date.now() / 60000) % open.length][0] : "somewhere";
+    nowLine.textContent = "Right now it is opening hours in " + sample + ". The platform is on.";
+  };
+  render();
+  setInterval(render, 60000);
 }

@@ -52,11 +52,11 @@ ${all.map(s => `          <a href="${s.href}" data-reveal class="group block foc
 };
 
 const solutionCta = (line) => `
-    <section class="bg-[#ff6a1a] py-20 text-black sm:py-28">
+    <section class="bg-[#f26a1e] py-20 text-black sm:py-28">
       <div data-reveal class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
           <h2 class="max-w-4xl text-5xl font-medium leading-[0.95] tracking-tight sm:text-7xl">${line}</h2>
-          <a href="contact-us.html" class="group inline-flex min-h-14 shrink-0 items-center justify-center gap-3 self-start rounded-md bg-black px-7 text-base font-medium text-white transition-colors hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#ff6a1a] lg:self-auto">
+          <a href="contact-us.html" class="group inline-flex min-h-14 shrink-0 items-center justify-center gap-3 self-start rounded-md bg-black px-7 text-base font-medium text-white transition-colors hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#f26a1e] lg:self-auto">
             Book a live demo <i data-lucide="arrow-up-right" class="h-5 w-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"></i>
           </a>
         </div>
@@ -68,7 +68,7 @@ export const fecBody = interiorHero({
   title: "Run your entire entertainment center from one screen.",
   lede: "Arcades, bowling, karting, laser tag, soft play, and parties. Parafait connects cashless play, redemption, bookings, and CRM so guests move faster and spend more.",
   image: "images/hero-fec.jpg",
-  tint: "#f06a18",
+  tint: "#e8631a",
   links: [{ href: "contact-us.html", label: "Book a demo", primary: true }, { href: "case-studies.html", label: "See case studies" }],
 }) + featureGrid([
   { icon: "credit-card", name: "Cashless RFID Cards and Wristbands", copy: "Tap to play across games and attractions. Cards roam between your locations, building loyalty at every visit." },
@@ -80,7 +80,7 @@ export const fecBody = interiorHero({
   { icon: "tv", name: "Digital Signage", copy: "Menus, promos, and leaderboards that update themselves from the same platform." },
   { icon: "heart", name: "360 Degree CRM", copy: "Know every guest. Segments, campaigns, offers, and loyalty tied to real play behavior." },
   { icon: "bar-chart-3", name: "Reports and Analytics", copy: "Revenue, game performance, and labor in real time, from any device, across every site." },
-], "#ff6a1a") + crossLinks("fec") + solutionCta("Give your guests a smarter day of play.");
+], "#f26a1e") + crossLinks("fec") + solutionCta("Give your guests a smarter day of play.");
 
 export const parksBody = interiorHero({
   kicker: "Tixera · Water and theme park suite",

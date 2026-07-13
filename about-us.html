@@ -8,68 +8,81 @@
 <meta property="og:description" content="Semnox is a technology partner to the leisure and hospitality industry, live across 2,800+ sites in 60+ countries.">
 <meta property="og:type" content="website">
 <title>About Us | Semnox Solutions</title>
-<link rel="icon" type="image/png" href="images/logo.png">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="alternate icon" type="image/png" href="images/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://unpkg.com/lucide@latest"></script>
+<style>
+  @keyframes marquee { to { transform: translateX(-50%); } }
+  .marquee-track { display: flex; width: max-content; animation: marquee 42s linear infinite; }
+  .marquee:hover .marquee-track { animation-play-state: paused; }
+  @media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }
+  .grain { position: absolute; inset: 0; pointer-events: none; opacity: .5; mix-blend-mode: overlay; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E"); }
+  .stat-figure { font-variant-numeric: tabular-nums; letter-spacing: -0.05em; }
+</style>
 </head>
 
-<body class="min-h-screen overflow-x-hidden bg-[#111213] font-['Inter'] text-[#f4f2ed] antialiased selection:bg-[#ff6a1a] selection:text-black">
+<body class="min-h-screen overflow-x-hidden bg-[#111213] font-['Inter'] text-[#f4f2ed] antialiased selection:bg-[#f26a1e] selection:text-black">
 
   <a href="#main-content" class="fixed left-4 top-4 z-[100] -translate-y-24 rounded-md bg-white px-4 py-3 text-sm font-medium text-black transition-transform focus:translate-y-0">Skip to content</a>
 
   <header id="site-header" class="fixed inset-x-0 top-0 z-50 border-b border-transparent transition-all duration-200">
     <div class="mx-auto flex h-16 max-w-screen-2xl items-center justify-between px-4 sm:px-6 lg:px-8">
-      <a href="index.html" aria-label="Semnox home" class="group inline-flex items-center gap-2.5 rounded-sm focus:outline-none focus:ring-2 focus:ring-[#ff6a1a] focus:ring-offset-4 focus:ring-offset-black">
-        <svg viewBox="0 0 34 34" class="h-7 w-7 text-[#ff6a1a]" aria-hidden="true">
-          <rect x="1" y="1" width="32" height="32" rx="3" fill="none" stroke="currentColor" stroke-width="1.5"></rect>
-          <path d="M24 10.5c-1.6-1.4-4.2-1.9-6.4-1C15 10.6 14.6 13.6 16.6 15c2.2 1.6 6 1 7.6 3.2 1.5 2.1.3 5-2.2 5.9-2.3.8-5 .2-6.6-1.3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+      <a href="index.html" aria-label="Semnox home" class="group inline-flex items-baseline gap-[0.18em] rounded-sm focus:outline-none focus:ring-2 focus:ring-[#f26a1e] focus:ring-offset-4 focus:ring-offset-black">
+        <span class="text-[1.35rem] font-bold lowercase leading-none tracking-[-0.045em] text-white">semn</span>
+        <svg viewBox="0 0 100 100" class="h-[1.06rem] w-[1.06rem] translate-y-[0.09em] transition-transform duration-500 group-hover:rotate-[120deg]" aria-hidden="true">
+          <path d="M50 50 L12.7 24.8 A45 45 0 0 1 87.3 24.8 Z" fill="#2E86C8"></path>
+          <path d="M50 50 L12.7 24.8 A45 45 0 0 1 87.3 24.8 Z" fill="#E5342B" transform="rotate(120 50 50)"></path>
+          <path d="M50 50 L12.7 24.8 A45 45 0 0 1 87.3 24.8 Z" fill="#33A852" transform="rotate(240 50 50)"></path>
+          <path d="M42 34 L70 50 L42 66 Z" fill="#FFD400" stroke="#FFD400" stroke-width="9" stroke-linejoin="round"></path>
         </svg>
-        <span class="text-lg font-medium tracking-tight text-white">Semnox<span class="text-[#ff6a1a]">.</span></span>
+        <span class="text-[1.35rem] font-bold lowercase leading-none tracking-[-0.045em] text-white">x</span>
+        <span class="self-start text-[0.55rem] font-semibold text-white/70">®</span>
       </a>
 
       <nav aria-label="Primary navigation" class="hidden items-center gap-7 lg:flex">
 
         <div class="relative" data-dropdown>
-          <button type="button" data-dropdown-button aria-expanded="false" class="inline-flex items-center gap-1.5 py-2 text-sm text-white/70 transition-colors hover:text-white focus:outline-none focus:ring-2 focus:ring-[#ff6a1a]">
+          <button type="button" data-dropdown-button aria-expanded="false" class="inline-flex items-center gap-1.5 py-2 text-sm text-white/70 transition-colors hover:text-white focus:outline-none focus:ring-2 focus:ring-[#f26a1e]">
             Solutions <i data-lucide="chevron-down" class="h-3.5 w-3.5 transition-transform" data-dropdown-icon></i>
           </button>
           <div data-dropdown-panel class="invisible absolute left-1/2 top-full z-50 w-72 -translate-x-1/2 translate-y-2 pt-3 opacity-0 transition-all duration-200">
             <div class="overflow-hidden rounded-md border border-white/15 bg-[#191a1b]/95 p-2 shadow-2xl shadow-black/50 backdrop-blur-md">
-              <a href="family-entertainment-centers.html" class="flex items-center justify-between gap-3 rounded-md px-4 py-3 text-sm text-white/75 transition-colors hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-[#ff6a1a]">
-                <span>Family Entertainment Centers</span><span class="rounded-full border border-[#ff6a1a]/40 px-2 py-0.5 text-[10px] uppercase tracking-widest text-[#ff6a1a]">Parafait</span>
+              <a href="family-entertainment-centers.html" class="flex items-center justify-between gap-3 rounded-md px-4 py-3 text-sm text-white/75 transition-colors hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-[#f26a1e]">
+                <span>Family Entertainment Centers</span><span class="rounded-full border border-[#f26a1e]/40 px-2 py-0.5 text-[10px] uppercase tracking-widest text-[#f26a1e]">Parafait</span>
               </a>
-              <a href="water-theme-parks.html" class="flex items-center justify-between gap-3 rounded-md px-4 py-3 text-sm text-white/75 transition-colors hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-[#ff6a1a]">
-                <span>Water and Theme Parks</span><span class="rounded-full border border-[#ff6a1a]/40 px-2 py-0.5 text-[10px] uppercase tracking-widest text-[#ff6a1a]">Tixera</span>
+              <a href="water-theme-parks.html" class="flex items-center justify-between gap-3 rounded-md px-4 py-3 text-sm text-white/75 transition-colors hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-[#f26a1e]">
+                <span>Water and Theme Parks</span><span class="rounded-full border border-[#f26a1e]/40 px-2 py-0.5 text-[10px] uppercase tracking-widest text-[#f26a1e]">Tixera</span>
               </a>
-              <a href="food-and-beverage.html" class="flex items-center justify-between gap-3 rounded-md px-4 py-3 text-sm text-white/75 transition-colors hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-[#ff6a1a]">
-                <span>Food and Beverage</span><span class="rounded-full border border-[#ff6a1a]/40 px-2 py-0.5 text-[10px] uppercase tracking-widest text-[#ff6a1a]">Delikopos</span>
+              <a href="food-and-beverage.html" class="flex items-center justify-between gap-3 rounded-md px-4 py-3 text-sm text-white/75 transition-colors hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-[#f26a1e]">
+                <span>Food and Beverage</span><span class="rounded-full border border-[#f26a1e]/40 px-2 py-0.5 text-[10px] uppercase tracking-widest text-[#f26a1e]">Delikopos</span>
               </a>
             </div>
           </div>
         </div>
 
         <div class="relative" data-dropdown>
-          <button type="button" data-dropdown-button aria-expanded="false" class="inline-flex items-center gap-1.5 py-2 text-sm text-white transition-colors hover:text-white focus:outline-none focus:ring-2 focus:ring-[#ff6a1a]">
+          <button type="button" data-dropdown-button aria-expanded="false" class="inline-flex items-center gap-1.5 py-2 text-sm text-white transition-colors hover:text-white focus:outline-none focus:ring-2 focus:ring-[#f26a1e]">
             Company <i data-lucide="chevron-down" class="h-3.5 w-3.5 transition-transform" data-dropdown-icon></i>
           </button>
           <div data-dropdown-panel class="invisible absolute left-1/2 top-full z-50 w-72 -translate-x-1/2 translate-y-2 pt-3 opacity-0 transition-all duration-200">
             <div class="overflow-hidden rounded-md border border-white/15 bg-[#191a1b]/95 p-2 shadow-2xl shadow-black/50 backdrop-blur-md">
-              <a href="about-us.html" class="flex items-center justify-between gap-3 rounded-md px-4 py-3 text-sm text-white/75 transition-colors hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-[#ff6a1a]">
+              <a href="about-us.html" class="flex items-center justify-between gap-3 rounded-md px-4 py-3 text-sm text-white/75 transition-colors hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-[#f26a1e]">
                 <span>About Us</span><i data-lucide="arrow-up-right" class="h-3.5 w-3.5 text-white/30"></i>
               </a>
-              <a href="our-team.html" class="flex items-center justify-between gap-3 rounded-md px-4 py-3 text-sm text-white/75 transition-colors hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-[#ff6a1a]">
+              <a href="our-team.html" class="flex items-center justify-between gap-3 rounded-md px-4 py-3 text-sm text-white/75 transition-colors hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-[#f26a1e]">
                 <span>Our Team</span><i data-lucide="arrow-up-right" class="h-3.5 w-3.5 text-white/30"></i>
               </a>
-              <a href="clients.html" class="flex items-center justify-between gap-3 rounded-md px-4 py-3 text-sm text-white/75 transition-colors hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-[#ff6a1a]">
+              <a href="clients.html" class="flex items-center justify-between gap-3 rounded-md px-4 py-3 text-sm text-white/75 transition-colors hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-[#f26a1e]">
                 <span>Our Clients</span><i data-lucide="arrow-up-right" class="h-3.5 w-3.5 text-white/30"></i>
               </a>
-              <a href="partners.html" class="flex items-center justify-between gap-3 rounded-md px-4 py-3 text-sm text-white/75 transition-colors hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-[#ff6a1a]">
+              <a href="partners.html" class="flex items-center justify-between gap-3 rounded-md px-4 py-3 text-sm text-white/75 transition-colors hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-[#f26a1e]">
                 <span>Partners</span><i data-lucide="arrow-up-right" class="h-3.5 w-3.5 text-white/30"></i>
               </a>
-              <a href="associations.html" class="flex items-center justify-between gap-3 rounded-md px-4 py-3 text-sm text-white/75 transition-colors hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-[#ff6a1a]">
+              <a href="associations.html" class="flex items-center justify-between gap-3 rounded-md px-4 py-3 text-sm text-white/75 transition-colors hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-[#f26a1e]">
                 <span>Associations</span><i data-lucide="arrow-up-right" class="h-3.5 w-3.5 text-white/30"></i>
               </a>
             </div>
@@ -77,41 +90,41 @@
         </div>
 
         <div class="relative" data-dropdown>
-          <button type="button" data-dropdown-button aria-expanded="false" class="inline-flex items-center gap-1.5 py-2 text-sm text-white/70 transition-colors hover:text-white focus:outline-none focus:ring-2 focus:ring-[#ff6a1a]">
+          <button type="button" data-dropdown-button aria-expanded="false" class="inline-flex items-center gap-1.5 py-2 text-sm text-white/70 transition-colors hover:text-white focus:outline-none focus:ring-2 focus:ring-[#f26a1e]">
             Media <i data-lucide="chevron-down" class="h-3.5 w-3.5 transition-transform" data-dropdown-icon></i>
           </button>
           <div data-dropdown-panel class="invisible absolute left-1/2 top-full z-50 w-72 -translate-x-1/2 translate-y-2 pt-3 opacity-0 transition-all duration-200">
             <div class="overflow-hidden rounded-md border border-white/15 bg-[#191a1b]/95 p-2 shadow-2xl shadow-black/50 backdrop-blur-md">
-              <a href="news-and-events.html" class="flex items-center justify-between gap-3 rounded-md px-4 py-3 text-sm text-white/75 transition-colors hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-[#ff6a1a]">
+              <a href="news-and-events.html" class="flex items-center justify-between gap-3 rounded-md px-4 py-3 text-sm text-white/75 transition-colors hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-[#f26a1e]">
                 <span>News and Events</span><i data-lucide="arrow-up-right" class="h-3.5 w-3.5 text-white/30"></i>
               </a>
-              <a href="gallery.html" class="flex items-center justify-between gap-3 rounded-md px-4 py-3 text-sm text-white/75 transition-colors hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-[#ff6a1a]">
+              <a href="gallery.html" class="flex items-center justify-between gap-3 rounded-md px-4 py-3 text-sm text-white/75 transition-colors hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-[#f26a1e]">
                 <span>Gallery</span><i data-lucide="arrow-up-right" class="h-3.5 w-3.5 text-white/30"></i>
               </a>
-              <a href="blog.html" class="flex items-center justify-between gap-3 rounded-md px-4 py-3 text-sm text-white/75 transition-colors hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-[#ff6a1a]">
+              <a href="blog.html" class="flex items-center justify-between gap-3 rounded-md px-4 py-3 text-sm text-white/75 transition-colors hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-[#f26a1e]">
                 <span>Blog</span><i data-lucide="arrow-up-right" class="h-3.5 w-3.5 text-white/30"></i>
               </a>
-              <a href="testimonials.html" class="flex items-center justify-between gap-3 rounded-md px-4 py-3 text-sm text-white/75 transition-colors hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-[#ff6a1a]">
+              <a href="testimonials.html" class="flex items-center justify-between gap-3 rounded-md px-4 py-3 text-sm text-white/75 transition-colors hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-[#f26a1e]">
                 <span>Testimonials</span><i data-lucide="arrow-up-right" class="h-3.5 w-3.5 text-white/30"></i>
               </a>
-              <a href="case-studies.html" class="flex items-center justify-between gap-3 rounded-md px-4 py-3 text-sm text-white/75 transition-colors hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-[#ff6a1a]">
+              <a href="case-studies.html" class="flex items-center justify-between gap-3 rounded-md px-4 py-3 text-sm text-white/75 transition-colors hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-[#f26a1e]">
                 <span>Case Studies</span><i data-lucide="arrow-up-right" class="h-3.5 w-3.5 text-white/30"></i>
               </a>
-              <a href="csr.html" class="flex items-center justify-between gap-3 rounded-md px-4 py-3 text-sm text-white/75 transition-colors hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-[#ff6a1a]">
+              <a href="csr.html" class="flex items-center justify-between gap-3 rounded-md px-4 py-3 text-sm text-white/75 transition-colors hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-[#f26a1e]">
                 <span>CSR</span><i data-lucide="arrow-up-right" class="h-3.5 w-3.5 text-white/30"></i>
               </a>
             </div>
           </div>
         </div>
-        <a href="careers.html" class="relative py-2 text-sm text-white/70 transition-colors duration-200 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-white after:transition-transform hover:text-white hover:after:origin-left hover:after:scale-x-100 focus:outline-none focus:ring-2 focus:ring-[#ff6a1a]">Careers</a>
+        <a href="careers.html" class="relative py-2 text-sm text-white/70 transition-colors duration-200 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-white after:transition-transform hover:text-white hover:after:origin-left hover:after:scale-x-100 focus:outline-none focus:ring-2 focus:ring-[#f26a1e]">Careers</a>
       </nav>
 
       <div class="flex items-center gap-3">
-        <a href="contact-us.html" class="group hidden min-h-11 items-center gap-2 rounded-md bg-[#ff6a1a] px-5 text-sm font-medium text-black transition-colors duration-200 hover:bg-[#ff8444] focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black sm:inline-flex">
+        <a href="contact-us.html" class="group hidden min-h-11 items-center gap-2 rounded-md bg-[#f26a1e] px-5 text-sm font-medium text-black transition-colors duration-200 hover:bg-[#f5823f] focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black sm:inline-flex">
           Book a demo
           <i data-lucide="arrow-up-right" class="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1"></i>
         </a>
-        <button id="menu-button" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-menu" class="inline-flex min-h-11 min-w-11 items-center justify-center rounded-md border border-white/20 text-white transition-colors hover:border-white/50 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-[#ff6a1a] lg:hidden">
+        <button id="menu-button" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-menu" class="inline-flex min-h-11 min-w-11 items-center justify-center rounded-md border border-white/20 text-white transition-colors hover:border-white/50 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-[#f26a1e] lg:hidden">
           <i data-lucide="menu" class="h-5 w-5"></i>
         </button>
       </div>
@@ -120,13 +133,13 @@
 
   <div id="mobile-menu" class="fixed inset-0 z-40 hidden overflow-y-auto bg-[#111213]/98 px-5 pb-10 pt-24 backdrop-blur-md lg:hidden" role="dialog" aria-modal="true" aria-label="Mobile navigation">
     <nav class="flex min-h-full flex-col" aria-label="Mobile navigation">
-      <p class="text-xs uppercase tracking-[0.2em] text-[#ff6a1a]">Solutions</p>
+      <p class="text-xs uppercase tracking-[0.2em] text-[#f26a1e]">Solutions</p>
       <div class="mt-2 flex flex-col border-t border-white/15">
         <a href="family-entertainment-centers.html" class="mobile-link flex min-h-14 items-center justify-between border-b border-white/15 text-lg tracking-tight">Family Entertainment Centers <i data-lucide="arrow-right" class="h-4 w-4 text-white/40"></i></a>
         <a href="water-theme-parks.html" class="mobile-link flex min-h-14 items-center justify-between border-b border-white/15 text-lg tracking-tight">Water and Theme Parks <i data-lucide="arrow-right" class="h-4 w-4 text-white/40"></i></a>
         <a href="food-and-beverage.html" class="mobile-link flex min-h-14 items-center justify-between border-b border-white/15 text-lg tracking-tight">Food and Beverage <i data-lucide="arrow-right" class="h-4 w-4 text-white/40"></i></a>
       </div>
-      <p class="mt-8 text-xs uppercase tracking-[0.2em] text-[#ff6a1a]">Company</p>
+      <p class="mt-8 text-xs uppercase tracking-[0.2em] text-[#f26a1e]">Company</p>
       <div class="mt-2 flex flex-col border-t border-white/15">
         <a href="about-us.html" class="mobile-link flex min-h-12 items-center justify-between border-b border-white/15 text-base tracking-tight">About Us <i data-lucide="arrow-right" class="h-4 w-4 text-white/40"></i></a>
         <a href="our-team.html" class="mobile-link flex min-h-12 items-center justify-between border-b border-white/15 text-base tracking-tight">Our Team <i data-lucide="arrow-right" class="h-4 w-4 text-white/40"></i></a>
@@ -134,7 +147,7 @@
         <a href="partners.html" class="mobile-link flex min-h-12 items-center justify-between border-b border-white/15 text-base tracking-tight">Partners <i data-lucide="arrow-right" class="h-4 w-4 text-white/40"></i></a>
         <a href="associations.html" class="mobile-link flex min-h-12 items-center justify-between border-b border-white/15 text-base tracking-tight">Associations <i data-lucide="arrow-right" class="h-4 w-4 text-white/40"></i></a>
       </div>
-      <p class="mt-8 text-xs uppercase tracking-[0.2em] text-[#ff6a1a]">Media</p>
+      <p class="mt-8 text-xs uppercase tracking-[0.2em] text-[#f26a1e]">Media</p>
       <div class="mt-2 flex flex-col border-t border-white/15">
         <a href="news-and-events.html" class="mobile-link flex min-h-12 items-center justify-between border-b border-white/15 text-base tracking-tight">News and Events <i data-lucide="arrow-right" class="h-4 w-4 text-white/40"></i></a>
         <a href="gallery.html" class="mobile-link flex min-h-12 items-center justify-between border-b border-white/15 text-base tracking-tight">Gallery <i data-lucide="arrow-right" class="h-4 w-4 text-white/40"></i></a>
@@ -144,7 +157,7 @@
         <a href="csr.html" class="mobile-link flex min-h-12 items-center justify-between border-b border-white/15 text-base tracking-tight">CSR <i data-lucide="arrow-right" class="h-4 w-4 text-white/40"></i></a>
         <a href="careers.html" class="mobile-link flex min-h-12 items-center justify-between border-b border-white/15 text-base tracking-tight">Careers <i data-lucide="arrow-right" class="h-4 w-4 text-white/40"></i></a>
       </div>
-      <a href="contact-us.html" class="mobile-link mt-10 inline-flex min-h-14 items-center justify-center gap-2 rounded-md bg-[#ff6a1a] px-5 text-base font-medium text-black">
+      <a href="contact-us.html" class="mobile-link mt-10 inline-flex min-h-14 items-center justify-center gap-2 rounded-md bg-[#f26a1e] px-5 text-base font-medium text-black">
         Book a demo <i data-lucide="arrow-up-right" class="h-5 w-5"></i>
       </a>
     </nav>
@@ -152,10 +165,11 @@
 
   <main id="main-content">
 
-    <section class="relative overflow-hidden" style="background-color:#f06a18">
+    <section class="relative overflow-hidden" style="background-color:#e8631a">
       <div class="absolute inset-0">
         <img src="images/about-banner.jpg" alt="" class="h-full w-full object-cover object-center mix-blend-multiply opacity-90" fetchpriority="high">
         <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/50"></div>
+        <div class="grain"></div>
       </div>
       <div class="relative mx-auto flex min-h-[62vh] max-w-screen-2xl flex-col justify-end px-4 pb-10 pt-32 sm:px-6 lg:px-8">
         <p data-hero class="mb-4 translate-y-6 text-sm font-medium text-white/80 opacity-0">About Semnox</p>
@@ -173,7 +187,7 @@
       <div class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <div class="grid gap-12 lg:grid-cols-12">
           <div data-reveal class="lg:col-span-5">
-            <p class="text-sm text-[#ff6a1a]">Vision</p>
+            <p class="text-sm text-[#f26a1e]">Vision</p>
             <h2 class="mt-4 text-4xl font-medium leading-tight tracking-tight sm:text-5xl">To be the most admired solutions provider to the leisure and hospitality industry.</h2>
             <p class="mt-6 max-w-md text-lg leading-relaxed text-white/60">
               We get there by leveraging technology and intellect to deliver the best business value to every customer, at every site, every day.
@@ -181,14 +195,14 @@
           </div>
           <div data-reveal class="lg:col-span-7">
             <div class="rounded-md border border-white/15 bg-[#191a1b] p-8">
-              <p class="text-sm text-[#ff6a1a]">Mission</p>
+              <p class="text-sm text-[#f26a1e]">Mission</p>
               <p class="mt-4 text-2xl font-medium leading-snug tracking-tight">
                 Help customers gain real business benefits through innovative, complete, high quality technology solutions, delivered by a customer-centric team.
               </p>
               <div class="mt-8 grid gap-6 border-t border-white/15 pt-6 sm:grid-cols-3">
-                <div><p class="text-3xl font-medium" data-count="2800" data-suffix="+">0</p><p class="mt-1 text-xs text-white/45">Sites live worldwide</p></div>
-                <div><p class="text-3xl font-medium" data-count="60" data-suffix="+">0</p><p class="mt-1 text-xs text-white/45">Countries</p></div>
-                <div><p class="text-3xl font-medium">24/7</p><p class="mt-1 text-xs text-white/45">Global support, all year</p></div>
+                <div><p class="stat-figure text-3xl font-semibold">2,800<span class="text-[#f26a1e]">+</span></p><p class="mt-1 text-xs text-white/45">Sites live worldwide</p></div>
+                <div><p class="stat-figure text-3xl font-semibold">60<span class="text-[#f26a1e]">+</span></p><p class="mt-1 text-xs text-white/45">Countries</p></div>
+                <div><p class="stat-figure text-3xl font-semibold">24<span class="text-[#f26a1e]">/7</span></p><p class="mt-1 text-xs text-white/45">Global support, all year</p></div>
               </div>
             </div>
           </div>
@@ -236,17 +250,17 @@
       <div class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <div class="grid gap-10 lg:grid-cols-12">
           <div data-reveal class="lg:col-span-4">
-            <p class="text-sm text-[#ff6a1a]">Recognition</p>
+            <p class="text-sm text-[#f26a1e]">Recognition</p>
             <h2 class="mt-4 text-4xl font-medium tracking-tight sm:text-5xl">Awarded by the industry itself.</h2>
           </div>
           <div class="grid gap-4 sm:grid-cols-2 lg:col-span-8">
-            <article data-reveal class="rounded-md border border-[#ff6a1a] bg-[#ff6a1a] p-6 text-black">
+            <article data-reveal class="rounded-md border border-[#f26a1e] bg-[#f26a1e] p-6 text-black">
               <i data-lucide="trophy" class="h-8 w-8"></i>
               <h3 class="mt-5 text-2xl font-medium tracking-tight">2x IAAPA Brass Ring Awards</h3>
               <p class="mt-3 text-base leading-relaxed text-black/65">The amusement industry's highest honor, awarded twice for product excellence.</p>
             </article>
             <article data-reveal class="rounded-md border border-white/15 p-6">
-              <i data-lucide="award" class="h-8 w-8 text-[#ff6a1a]"></i>
+              <i data-lucide="award" class="h-8 w-8 text-[#f26a1e]"></i>
               <h3 class="mt-5 text-2xl font-medium tracking-tight">6x Innovative Product of the Year</h3>
               <p class="mt-3 text-base leading-relaxed text-white/55">Recognized six times at IAAPI conferences for breakthrough products.</p>
             </article>
@@ -255,11 +269,11 @@
       </div>
     </section>
 
-    <section class="bg-[#ff6a1a] py-20 text-black sm:py-28">
+    <section class="bg-[#f26a1e] py-20 text-black sm:py-28">
       <div data-reveal class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
           <h2 class="max-w-4xl text-5xl font-medium leading-[0.95] tracking-tight sm:text-7xl">Meet the people behind the platform.</h2>
-          <a href="our-team.html" class="group inline-flex min-h-14 shrink-0 items-center justify-center gap-3 self-start rounded-md bg-black px-7 text-base font-medium text-white transition-colors hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#ff6a1a] lg:self-auto">
+          <a href="our-team.html" class="group inline-flex min-h-14 shrink-0 items-center justify-center gap-3 self-start rounded-md bg-black px-7 text-base font-medium text-white transition-colors hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#f26a1e] lg:self-auto">
             Our leadership <i data-lucide="arrow-up-right" class="h-5 w-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"></i>
           </a>
         </div>
@@ -276,37 +290,37 @@
             Technology that powers the world's entertainment and leisure venues. Live across 2,800+ sites in 60+ countries.
           </p>
           <div class="mt-5 flex flex-col gap-2 text-sm text-white/55">
-            <a href="mailto:corp.sales@semnox.com" class="transition-colors hover:text-[#ff6a1a]">corp.sales@semnox.com</a>
-            <a href="tel:+918244255888" class="transition-colors hover:text-[#ff6a1a]">+91 824 425 5888</a>
+            <a href="mailto:corp.sales@semnox.com" class="transition-colors hover:text-[#f26a1e]">corp.sales@semnox.com</a>
+            <a href="tel:+918244255888" class="transition-colors hover:text-[#f26a1e]">+91 824 425 5888</a>
           </div>
         </div>
         <div>
           <p class="text-xs text-white/35">Solutions</p>
           <div class="mt-4 flex flex-col items-start gap-3 text-sm">
-            <a href="family-entertainment-centers.html" class="transition-colors hover:text-[#ff6a1a] focus:outline-none focus:ring-2 focus:ring-[#ff6a1a]">Family Entertainment Centers</a>
-            <a href="water-theme-parks.html" class="transition-colors hover:text-[#ff6a1a] focus:outline-none focus:ring-2 focus:ring-[#ff6a1a]">Water and Theme Parks</a>
-            <a href="food-and-beverage.html" class="transition-colors hover:text-[#ff6a1a] focus:outline-none focus:ring-2 focus:ring-[#ff6a1a]">Food and Beverage</a>
-            <a href="case-studies.html" class="transition-colors hover:text-[#ff6a1a] focus:outline-none focus:ring-2 focus:ring-[#ff6a1a]">Case Studies</a>
+            <a href="family-entertainment-centers.html" class="transition-colors hover:text-[#f26a1e] focus:outline-none focus:ring-2 focus:ring-[#f26a1e]">Family Entertainment Centers</a>
+            <a href="water-theme-parks.html" class="transition-colors hover:text-[#f26a1e] focus:outline-none focus:ring-2 focus:ring-[#f26a1e]">Water and Theme Parks</a>
+            <a href="food-and-beverage.html" class="transition-colors hover:text-[#f26a1e] focus:outline-none focus:ring-2 focus:ring-[#f26a1e]">Food and Beverage</a>
+            <a href="case-studies.html" class="transition-colors hover:text-[#f26a1e] focus:outline-none focus:ring-2 focus:ring-[#f26a1e]">Case Studies</a>
           </div>
         </div>
         <div>
           <p class="text-xs text-white/35">Company</p>
           <div class="mt-4 flex flex-col items-start gap-3 text-sm">
-            <a href="about-us.html" class="transition-colors hover:text-[#ff6a1a] focus:outline-none focus:ring-2 focus:ring-[#ff6a1a]">About us</a>
-            <a href="our-team.html" class="transition-colors hover:text-[#ff6a1a] focus:outline-none focus:ring-2 focus:ring-[#ff6a1a]">Our team</a>
-            <a href="clients.html" class="transition-colors hover:text-[#ff6a1a] focus:outline-none focus:ring-2 focus:ring-[#ff6a1a]">Our clients</a>
-            <a href="partners.html" class="transition-colors hover:text-[#ff6a1a] focus:outline-none focus:ring-2 focus:ring-[#ff6a1a]">Partners</a>
-            <a href="careers.html" class="transition-colors hover:text-[#ff6a1a] focus:outline-none focus:ring-2 focus:ring-[#ff6a1a]">Careers</a>
+            <a href="about-us.html" class="transition-colors hover:text-[#f26a1e] focus:outline-none focus:ring-2 focus:ring-[#f26a1e]">About us</a>
+            <a href="our-team.html" class="transition-colors hover:text-[#f26a1e] focus:outline-none focus:ring-2 focus:ring-[#f26a1e]">Our team</a>
+            <a href="clients.html" class="transition-colors hover:text-[#f26a1e] focus:outline-none focus:ring-2 focus:ring-[#f26a1e]">Our clients</a>
+            <a href="partners.html" class="transition-colors hover:text-[#f26a1e] focus:outline-none focus:ring-2 focus:ring-[#f26a1e]">Partners</a>
+            <a href="careers.html" class="transition-colors hover:text-[#f26a1e] focus:outline-none focus:ring-2 focus:ring-[#f26a1e]">Careers</a>
           </div>
         </div>
         <div>
           <p class="text-xs text-white/35">Media</p>
           <div class="mt-4 flex flex-col items-start gap-3 text-sm">
-            <a href="news-and-events.html" class="transition-colors hover:text-[#ff6a1a] focus:outline-none focus:ring-2 focus:ring-[#ff6a1a]">News and events</a>
-            <a href="blog.html" class="transition-colors hover:text-[#ff6a1a] focus:outline-none focus:ring-2 focus:ring-[#ff6a1a]">Blog</a>
-            <a href="gallery.html" class="transition-colors hover:text-[#ff6a1a] focus:outline-none focus:ring-2 focus:ring-[#ff6a1a]">Gallery</a>
-            <a href="testimonials.html" class="transition-colors hover:text-[#ff6a1a] focus:outline-none focus:ring-2 focus:ring-[#ff6a1a]">Testimonials</a>
-            <a href="csr.html" class="transition-colors hover:text-[#ff6a1a] focus:outline-none focus:ring-2 focus:ring-[#ff6a1a]">CSR</a>
+            <a href="news-and-events.html" class="transition-colors hover:text-[#f26a1e] focus:outline-none focus:ring-2 focus:ring-[#f26a1e]">News and events</a>
+            <a href="blog.html" class="transition-colors hover:text-[#f26a1e] focus:outline-none focus:ring-2 focus:ring-[#f26a1e]">Blog</a>
+            <a href="gallery.html" class="transition-colors hover:text-[#f26a1e] focus:outline-none focus:ring-2 focus:ring-[#f26a1e]">Gallery</a>
+            <a href="testimonials.html" class="transition-colors hover:text-[#f26a1e] focus:outline-none focus:ring-2 focus:ring-[#f26a1e]">Testimonials</a>
+            <a href="csr.html" class="transition-colors hover:text-[#f26a1e] focus:outline-none focus:ring-2 focus:ring-[#f26a1e]">CSR</a>
           </div>
         </div>
       </div>
@@ -315,12 +329,23 @@
         <div class="flex flex-col gap-3 text-xs text-white/35 sm:flex-row sm:items-center sm:justify-between">
           <p>© 2026 Semnox Solutions Ltd. All rights reserved.</p>
           <div class="flex flex-wrap gap-5">
-            <a href="contact-us.html" class="hover:text-white focus:outline-none focus:ring-2 focus:ring-[#ff6a1a]">Privacy</a>
-            <a href="contact-us.html" class="hover:text-white focus:outline-none focus:ring-2 focus:ring-[#ff6a1a]">Cookie policy</a>
-            <a href="contact-us.html" class="hover:text-white focus:outline-none focus:ring-2 focus:ring-[#ff6a1a]">Disclaimer</a>
+            <a href="https://www.semnox.com/privacy-policy.html" target="_blank" rel="noopener" class="hover:text-white focus:outline-none focus:ring-2 focus:ring-[#f26a1e]">Privacy</a>
+            <a href="https://www.semnox.com/cookie-policy.html" target="_blank" rel="noopener" class="hover:text-white focus:outline-none focus:ring-2 focus:ring-[#f26a1e]">Cookie policy</a>
+            <a href="https://www.semnox.com/disclaimer.html" target="_blank" rel="noopener" class="hover:text-white focus:outline-none focus:ring-2 focus:ring-[#f26a1e]">Disclaimer</a>
           </div>
         </div>
-        <p class="break-words text-5xl font-medium leading-none tracking-tight text-white/90 sm:text-7xl lg:text-8xl">Semnox<span class="text-[#ff6a1a]">®</span></p>
+        <a href="index.html" aria-label="Semnox home" class="group inline-flex w-fit items-baseline gap-[0.14em] focus:outline-none focus:ring-2 focus:ring-[#f26a1e]">
+          <span class="text-6xl font-bold lowercase leading-none tracking-[-0.05em] text-white/90 transition-colors duration-300 group-hover:text-white sm:text-8xl lg:text-9xl">semn</span>
+          <svg viewBox="0 0 100 100" class="h-[3rem] w-[3rem] translate-y-[0.1em] transition-transform duration-700 ease-out group-hover:rotate-[240deg] sm:h-[4.2rem] sm:w-[4.2rem] lg:h-[5.6rem] lg:w-[5.6rem]" aria-hidden="true">
+          <path d="M50 50 L12.7 24.8 A45 45 0 0 1 87.3 24.8 Z" fill="#2E86C8"></path>
+          <path d="M50 50 L12.7 24.8 A45 45 0 0 1 87.3 24.8 Z" fill="#E5342B" transform="rotate(120 50 50)"></path>
+          <path d="M50 50 L12.7 24.8 A45 45 0 0 1 87.3 24.8 Z" fill="#33A852" transform="rotate(240 50 50)"></path>
+          <path d="M42 34 L70 50 L42 66 Z" fill="#FFD400" stroke="#FFD400" stroke-width="9" stroke-linejoin="round"></path>
+        </svg>
+          <span class="text-6xl font-bold lowercase leading-none tracking-[-0.05em] text-white/90 transition-colors duration-300 group-hover:text-white sm:text-8xl lg:text-9xl">x</span>
+          <span class="self-start text-base font-semibold text-white/60 sm:text-xl">®</span>
+        </a>
+        <p class="max-w-md text-xs leading-relaxed text-white/30">Where the world goes to play.</p>
       </div>
     </div>
   </footer>
