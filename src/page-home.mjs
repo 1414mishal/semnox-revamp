@@ -65,11 +65,11 @@ export const homeBody = `
           <p data-hero class="mb-5 translate-y-6 text-sm font-medium text-white/80 opacity-0">
             Entertainment technology, since 2008
           </p>
-          <h1 data-hero class="max-w-5xl translate-y-6 text-5xl font-medium leading-[0.92] tracking-tight text-white opacity-0 sm:text-7xl lg:text-8xl">
+          <h1 data-hero class="max-w-5xl translate-y-6 text-[2.7rem] font-medium leading-[1.05] tracking-tight text-white opacity-0 sm:text-7xl sm:leading-[0.92] lg:text-8xl">
             We power the world's best days out.
           </h1>
           <div class="mt-7 grid gap-6 border-t border-white/35 pt-6 md:grid-cols-12 md:items-end">
-            <p data-hero class="translate-y-6 text-lg leading-relaxed text-white/90 opacity-0 md:col-span-6 lg:col-span-5">
+            <p data-hero class="translate-y-6 text-base leading-relaxed text-white/90 opacity-0 sm:text-lg md:col-span-6 lg:col-span-5">
               One connected platform for family entertainment centers, water and theme parks, and food and beverage operations. Ticketing, cashless, POS, CRM, and everything in between.
             </p>
             <div data-hero class="flex translate-y-6 flex-col gap-3 opacity-0 sm:flex-row md:col-span-6 md:justify-end">
