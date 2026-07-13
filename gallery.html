@@ -2,7 +2,7 @@
 <html lang="en" class="scroll-smooth bg-[#111213]">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="description" content="A visual tour of venues and installs powered by Semnox.">
 <meta property="og:title" content="Gallery | Semnox Solutions">
 <meta property="og:description" content="A visual tour of venues and installs powered by Semnox.">
@@ -22,6 +22,9 @@
   @media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }
   .grain { position: absolute; inset: 0; pointer-events: none; opacity: .5; mix-blend-mode: overlay; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E"); }
   .stat-figure { font-variant-numeric: tabular-nums; letter-spacing: -0.05em; }
+  html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  * { -webkit-tap-highlight-color: transparent; }
+  @media (max-width: 640px) { .marquee-track { animation-duration: 26s; } }
 </style>
 </head>
 
@@ -171,7 +174,7 @@
         <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/50"></div>
         <div class="grain"></div>
       </div>
-      <div class="relative mx-auto flex min-h-[62vh] max-w-screen-2xl flex-col justify-end px-4 pb-10 pt-32 sm:px-6 lg:px-8">
+      <div class="relative mx-auto flex min-h-[55svh] max-w-screen-2xl flex-col justify-end px-4 pb-8 pt-28 sm:min-h-[62vh] sm:px-6 sm:pb-10 sm:pt-32 lg:px-8">
         <p data-hero class="mb-4 translate-y-6 text-sm font-medium text-white/80 opacity-0">Gallery</p>
         <h1 data-hero class="max-w-4xl translate-y-6 text-4xl font-medium leading-[0.95] tracking-tight text-white opacity-0 sm:text-6xl lg:text-7xl">The platform, out in the wild.</h1>
         <div class="mt-7 grid gap-6 border-t border-white/35 pt-6 md:grid-cols-12 md:items-end">
@@ -180,56 +183,72 @@
         </div>
       </div>
     </section>
-    <section class="bg-[#111213] py-20 sm:py-28">
+    <section class="bg-[#111213] py-14 sm:py-20 lg:py-28">
       <div class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
-        <div class="columns-2 gap-4 lg:columns-3">
-          <figure data-reveal class="group relative mb-4 break-inside-avoid overflow-hidden rounded-md">
-            <img src="images/hero-park.jpg" alt="Peak day at a partner park" loading="lazy" class="w-full transition duration-700 ease-out group-hover:scale-[1.04]">
-            <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-4 pb-3 pt-10 text-sm text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">Peak day at a partner park</figcaption>
+        <div class="columns-2 gap-3 sm:gap-4 lg:columns-3">
+          <figure data-reveal class="group relative mb-3 break-inside-avoid overflow-hidden rounded-md sm:mb-4">
+            <img src="images/gallery/wokivia-1.jpg" alt="Wokivia, Mexico" loading="lazy" decoding="async" class="w-full transition duration-700 ease-out group-hover:scale-[1.04]">
+            <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-3 pb-2.5 pt-10 text-xs text-white sm:px-4 sm:pb-3 sm:text-sm">Wokivia, Mexico</figcaption>
           </figure>
-          <figure data-reveal class="group relative mb-4 break-inside-avoid overflow-hidden rounded-md">
-            <img src="images/fec.jpg" alt="Arcade floor on Parafait" loading="lazy" class="w-full transition duration-700 ease-out group-hover:scale-[1.04]">
-            <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-4 pb-3 pt-10 text-sm text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">Arcade floor on Parafait</figcaption>
+          <figure data-reveal class="group relative mb-3 break-inside-avoid overflow-hidden rounded-md sm:mb-4">
+            <img src="images/gallery/iaapa-1.jpg" alt="Semnox booth, IAAPA Expo" loading="lazy" decoding="async" class="w-full transition duration-700 ease-out group-hover:scale-[1.04]">
+            <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-3 pb-2.5 pt-10 text-xs text-white sm:px-4 sm:pb-3 sm:text-sm">Semnox booth, IAAPA Expo</figcaption>
           </figure>
-          <figure data-reveal class="group relative mb-4 break-inside-avoid overflow-hidden rounded-md">
-            <img src="images/water-parks.jpg" alt="Wristband entry at a water park" loading="lazy" class="w-full transition duration-700 ease-out group-hover:scale-[1.04]">
-            <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-4 pb-3 pt-10 text-sm text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">Wristband entry at a water park</figcaption>
+          <figure data-reveal class="group relative mb-3 break-inside-avoid overflow-hidden rounded-md sm:mb-4">
+            <img src="images/gallery/panda-1.jpg" alt="Panda Aventura, Colombia" loading="lazy" decoding="async" class="w-full transition duration-700 ease-out group-hover:scale-[1.04]">
+            <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-3 pb-2.5 pt-10 text-xs text-white sm:px-4 sm:pb-3 sm:text-sm">Panda Aventura, Colombia</figcaption>
           </figure>
-          <figure data-reveal class="group relative mb-4 break-inside-avoid overflow-hidden rounded-md">
-            <img src="images/theme-parks.jpg" alt="Theme park access control" loading="lazy" class="w-full transition duration-700 ease-out group-hover:scale-[1.04]">
-            <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-4 pb-3 pt-10 text-sm text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">Theme park access control</figcaption>
+          <figure data-reveal class="group relative mb-3 break-inside-avoid overflow-hidden rounded-md sm:mb-4">
+            <img src="images/gallery/cec-1.jpg" alt="Chuck E. Cheese, Honduras" loading="lazy" decoding="async" class="w-full transition duration-700 ease-out group-hover:scale-[1.04]">
+            <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-3 pb-2.5 pt-10 text-xs text-white sm:px-4 sm:pb-3 sm:text-sm">Chuck E. Cheese, Honduras</figcaption>
           </figure>
-          <figure data-reveal class="group relative mb-4 break-inside-avoid overflow-hidden rounded-md">
-            <img src="images/kids-play.jpg" alt="Soft play, cashless" loading="lazy" class="w-full transition duration-700 ease-out group-hover:scale-[1.04]">
-            <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-4 pb-3 pt-10 text-sm text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">Soft play, cashless</figcaption>
+          <figure data-reveal class="group relative mb-3 break-inside-avoid overflow-hidden rounded-md sm:mb-4">
+            <img src="images/gallery/mundijuegos-1.jpg" alt="Mundijuegos, Ecuador" loading="lazy" decoding="async" class="w-full transition duration-700 ease-out group-hover:scale-[1.04]">
+            <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-3 pb-2.5 pt-10 text-xs text-white sm:px-4 sm:pb-3 sm:text-sm">Mundijuegos, Ecuador</figcaption>
           </figure>
-          <figure data-reveal class="group relative mb-4 break-inside-avoid overflow-hidden rounded-md">
-            <img src="images/trampoline.jpg" alt="Trampoline park time sessions" loading="lazy" class="w-full transition duration-700 ease-out group-hover:scale-[1.04]">
-            <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-4 pb-3 pt-10 text-sm text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">Trampoline park time sessions</figcaption>
+          <figure data-reveal class="group relative mb-3 break-inside-avoid overflow-hidden rounded-md sm:mb-4">
+            <img src="images/gallery/carrousel-1.jpg" alt="Carrousel, Guatemala" loading="lazy" decoding="async" class="w-full transition duration-700 ease-out group-hover:scale-[1.04]">
+            <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-3 pb-2.5 pt-10 text-xs text-white sm:px-4 sm:pb-3 sm:text-sm">Carrousel, Guatemala</figcaption>
           </figure>
-          <figure data-reveal class="group relative mb-4 break-inside-avoid overflow-hidden rounded-md">
-            <img src="images/aquarium.jpg" alt="Aquarium ticketing" loading="lazy" class="w-full transition duration-700 ease-out group-hover:scale-[1.04]">
-            <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-4 pb-3 pt-10 text-sm text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">Aquarium ticketing</figcaption>
+          <figure data-reveal class="group relative mb-3 break-inside-avoid overflow-hidden rounded-md sm:mb-4">
+            <img src="images/gallery/lmbol-1.jpg" alt="LMBOL, Mexico" loading="lazy" decoding="async" class="w-full transition duration-700 ease-out group-hover:scale-[1.04]">
+            <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-3 pb-2.5 pt-10 text-xs text-white sm:px-4 sm:pb-3 sm:text-sm">LMBOL, Mexico</figcaption>
           </figure>
-          <figure data-reveal class="group relative mb-4 break-inside-avoid overflow-hidden rounded-md">
-            <img src="images/museum.jpg" alt="Museum visitor flow" loading="lazy" class="w-full transition duration-700 ease-out group-hover:scale-[1.04]">
-            <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-4 pb-3 pt-10 text-sm text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">Museum visitor flow</figcaption>
+          <figure data-reveal class="group relative mb-3 break-inside-avoid overflow-hidden rounded-md sm:mb-4">
+            <img src="images/gallery/iaapa-2.jpg" alt="Live demos at IAAPA" loading="lazy" decoding="async" class="w-full transition duration-700 ease-out group-hover:scale-[1.04]">
+            <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-3 pb-2.5 pt-10 text-xs text-white sm:px-4 sm:pb-3 sm:text-sm">Live demos at IAAPA</figcaption>
           </figure>
-          <figure data-reveal class="group relative mb-4 break-inside-avoid overflow-hidden rounded-md">
-            <img src="images/restaurant.jpg" alt="Delikopos in service" loading="lazy" class="w-full transition duration-700 ease-out group-hover:scale-[1.04]">
-            <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-4 pb-3 pt-10 text-sm text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">Delikopos in service</figcaption>
+          <figure data-reveal class="group relative mb-3 break-inside-avoid overflow-hidden rounded-md sm:mb-4">
+            <img src="images/gallery/wokivia-2.jpg" alt="Wokivia, Mexico" loading="lazy" decoding="async" class="w-full transition duration-700 ease-out group-hover:scale-[1.04]">
+            <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-3 pb-2.5 pt-10 text-xs text-white sm:px-4 sm:pb-3 sm:text-sm">Wokivia, Mexico</figcaption>
           </figure>
-          <figure data-reveal class="group relative mb-4 break-inside-avoid overflow-hidden rounded-md">
-            <img src="images/foodcourt.jpg" alt="Food court token displays" loading="lazy" class="w-full transition duration-700 ease-out group-hover:scale-[1.04]">
-            <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-4 pb-3 pt-10 text-sm text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">Food court token displays</figcaption>
+          <figure data-reveal class="group relative mb-3 break-inside-avoid overflow-hidden rounded-md sm:mb-4">
+            <img src="images/gallery/klaimprize-1.jpg" alt="KlaimPrize redemption kiosk" loading="lazy" decoding="async" class="w-full transition duration-700 ease-out group-hover:scale-[1.04]">
+            <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-3 pb-2.5 pt-10 text-xs text-white sm:px-4 sm:pb-3 sm:text-sm">KlaimPrize redemption kiosk</figcaption>
           </figure>
-          <figure data-reveal class="group relative mb-4 break-inside-avoid overflow-hidden rounded-md">
-            <img src="images/vr-ar.jpg" alt="VR arena sessions" loading="lazy" class="w-full transition duration-700 ease-out group-hover:scale-[1.04]">
-            <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-4 pb-3 pt-10 text-sm text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">VR arena sessions</figcaption>
+          <figure data-reveal class="group relative mb-3 break-inside-avoid overflow-hidden rounded-md sm:mb-4">
+            <img src="images/gallery/panda-2.jpg" alt="Panda Aventura, Colombia" loading="lazy" decoding="async" class="w-full transition duration-700 ease-out group-hover:scale-[1.04]">
+            <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-3 pb-2.5 pt-10 text-xs text-white sm:px-4 sm:pb-3 sm:text-sm">Panda Aventura, Colombia</figcaption>
           </figure>
-          <figure data-reveal class="group relative mb-4 break-inside-avoid overflow-hidden rounded-md">
-            <img src="images/hero-fnb.jpg" alt="Counter service, no queues" loading="lazy" class="w-full transition duration-700 ease-out group-hover:scale-[1.04]">
-            <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-4 pb-3 pt-10 text-sm text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">Counter service, no queues</figcaption>
+          <figure data-reveal class="group relative mb-3 break-inside-avoid overflow-hidden rounded-md sm:mb-4">
+            <img src="images/gallery/cec-2.jpg" alt="Chuck E. Cheese, Honduras" loading="lazy" decoding="async" class="w-full transition duration-700 ease-out group-hover:scale-[1.04]">
+            <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-3 pb-2.5 pt-10 text-xs text-white sm:px-4 sm:pb-3 sm:text-sm">Chuck E. Cheese, Honduras</figcaption>
+          </figure>
+          <figure data-reveal class="group relative mb-3 break-inside-avoid overflow-hidden rounded-md sm:mb-4">
+            <img src="images/gallery/mundijuegos-2.jpg" alt="Mundijuegos, Ecuador" loading="lazy" decoding="async" class="w-full transition duration-700 ease-out group-hover:scale-[1.04]">
+            <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-3 pb-2.5 pt-10 text-xs text-white sm:px-4 sm:pb-3 sm:text-sm">Mundijuegos, Ecuador</figcaption>
+          </figure>
+          <figure data-reveal class="group relative mb-3 break-inside-avoid overflow-hidden rounded-md sm:mb-4">
+            <img src="images/gallery/iaapa-3.jpg" alt="IAAPA Expo floor" loading="lazy" decoding="async" class="w-full transition duration-700 ease-out group-hover:scale-[1.04]">
+            <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-3 pb-2.5 pt-10 text-xs text-white sm:px-4 sm:pb-3 sm:text-sm">IAAPA Expo floor</figcaption>
+          </figure>
+          <figure data-reveal class="group relative mb-3 break-inside-avoid overflow-hidden rounded-md sm:mb-4">
+            <img src="images/gallery/carrousel-2.jpg" alt="Carrousel, Guatemala" loading="lazy" decoding="async" class="w-full transition duration-700 ease-out group-hover:scale-[1.04]">
+            <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-3 pb-2.5 pt-10 text-xs text-white sm:px-4 sm:pb-3 sm:text-sm">Carrousel, Guatemala</figcaption>
+          </figure>
+          <figure data-reveal class="group relative mb-3 break-inside-avoid overflow-hidden rounded-md sm:mb-4">
+            <img src="images/gallery/lmbol-2.jpg" alt="LMBOL, Mexico" loading="lazy" decoding="async" class="w-full transition duration-700 ease-out group-hover:scale-[1.04]">
+            <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-3 pb-2.5 pt-10 text-xs text-white sm:px-4 sm:pb-3 sm:text-sm">LMBOL, Mexico</figcaption>
           </figure>
         </div>
       </div>

@@ -2,7 +2,7 @@
 <html lang="en" class="scroll-smooth bg-[#111213]">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="description" content="What operators around the world say about running their venues on Semnox.">
 <meta property="og:title" content="Testimonials | Semnox Solutions">
 <meta property="og:description" content="What operators around the world say about running their venues on Semnox.">
@@ -22,6 +22,9 @@
   @media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }
   .grain { position: absolute; inset: 0; pointer-events: none; opacity: .5; mix-blend-mode: overlay; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E"); }
   .stat-figure { font-variant-numeric: tabular-nums; letter-spacing: -0.05em; }
+  html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  * { -webkit-tap-highlight-color: transparent; }
+  @media (max-width: 640px) { .marquee-track { animation-duration: 26s; } }
 </style>
 </head>
 
@@ -171,7 +174,7 @@
         <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/50"></div>
         <div class="grain"></div>
       </div>
-      <div class="relative mx-auto flex min-h-[62vh] max-w-screen-2xl flex-col justify-end px-4 pb-10 pt-32 sm:px-6 lg:px-8">
+      <div class="relative mx-auto flex min-h-[55svh] max-w-screen-2xl flex-col justify-end px-4 pb-8 pt-28 sm:min-h-[62vh] sm:px-6 sm:pb-10 sm:pt-32 lg:px-8">
         <p data-hero class="mb-4 translate-y-6 text-sm font-medium text-white/80 opacity-0">Testimonials</p>
         <h1 data-hero class="max-w-4xl translate-y-6 text-4xl font-medium leading-[0.95] tracking-tight text-white opacity-0 sm:text-6xl lg:text-7xl">Operators say it better than we ever could.</h1>
         <div class="mt-7 grid gap-6 border-t border-white/35 pt-6 md:grid-cols-12 md:items-end">
@@ -182,7 +185,7 @@
         </div>
       </div>
     </section>
-    <section class="bg-[#111213] py-20 sm:py-28">
+    <section class="bg-[#111213] py-14 sm:py-20 lg:py-28">
       <div class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <div class="columns-1 gap-4 sm:columns-2 lg:columns-3">
           <figure data-reveal class="mb-4 break-inside-avoid rounded-md border border-white/15 bg-[#191a1b] p-6 transition-colors hover:border-[#f26a1e]/60">
@@ -337,17 +340,6 @@
               <p class="mt-0.5 text-xs text-white/45">Owner and Director, Knightly's Fun Park</p>
             </figcaption>
           </figure>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-[#f26a1e] py-20 text-black sm:py-28">
-      <div data-reveal class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
-          <h2 class="max-w-4xl text-5xl font-medium leading-[0.95] tracking-tight sm:text-7xl">Your quote could be next.</h2>
-          <a href="contact-us.html" class="group inline-flex min-h-14 shrink-0 items-center justify-center gap-3 self-start rounded-md bg-black px-7 text-base font-medium text-white transition-colors hover:bg-white hover:text-black lg:self-auto">
-            Book a demo <i data-lucide="arrow-up-right" class="h-5 w-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"></i>
-          </a>
         </div>
       </div>
     </section>

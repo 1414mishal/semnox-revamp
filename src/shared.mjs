@@ -166,7 +166,7 @@ export const pageShell = ({ file, title, desc, active = "", body }) => `<!DOCTYP
 <html lang="en" class="scroll-smooth bg-[#111213]">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="description" content="${desc}">
 <meta property="og:title" content="${title}">
 <meta property="og:description" content="${desc}">
@@ -186,6 +186,9 @@ export const pageShell = ({ file, title, desc, active = "", body }) => `<!DOCTYP
   @media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }
   .grain { position: absolute; inset: 0; pointer-events: none; opacity: .5; mix-blend-mode: overlay; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E"); }
   .stat-figure { font-variant-numeric: tabular-nums; letter-spacing: -0.05em; }
+  html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  * { -webkit-tap-highlight-color: transparent; }
+  @media (max-width: 640px) { .marquee-track { animation-duration: 26s; } }
 </style>
 </head>
 
@@ -210,7 +213,7 @@ export const interiorHero = ({ kicker, title, lede, image, tint = "#e8631a", lin
         <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/50"></div>
         <div class="grain"></div>
       </div>
-      <div class="relative mx-auto flex min-h-[62vh] max-w-screen-2xl flex-col justify-end px-4 pb-10 pt-32 sm:px-6 lg:px-8">
+      <div class="relative mx-auto flex min-h-[55svh] max-w-screen-2xl flex-col justify-end px-4 pb-8 pt-28 sm:min-h-[62vh] sm:px-6 sm:pb-10 sm:pt-32 lg:px-8">
         <p data-hero class="mb-4 translate-y-6 text-sm font-medium text-white/80 opacity-0">${kicker}</p>
         <h1 data-hero class="max-w-4xl translate-y-6 text-4xl font-medium leading-[0.95] tracking-tight text-white opacity-0 sm:text-6xl lg:text-7xl">${title}</h1>
         <div class="mt-7 grid gap-6 border-t border-white/35 pt-6 md:grid-cols-12 md:items-end">

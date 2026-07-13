@@ -2,7 +2,7 @@
 <html lang="en" class="scroll-smooth bg-[#111213]">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="description" content="Guides, product deep dives, and operations thinking for entertainment operators.">
 <meta property="og:title" content="Blog | Semnox Solutions">
 <meta property="og:description" content="Guides, product deep dives, and operations thinking for entertainment operators.">
@@ -22,6 +22,9 @@
   @media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }
   .grain { position: absolute; inset: 0; pointer-events: none; opacity: .5; mix-blend-mode: overlay; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E"); }
   .stat-figure { font-variant-numeric: tabular-nums; letter-spacing: -0.05em; }
+  html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  * { -webkit-tap-highlight-color: transparent; }
+  @media (max-width: 640px) { .marquee-track { animation-duration: 26s; } }
 </style>
 </head>
 
@@ -171,7 +174,7 @@
         <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/50"></div>
         <div class="grain"></div>
       </div>
-      <div class="relative mx-auto flex min-h-[62vh] max-w-screen-2xl flex-col justify-end px-4 pb-10 pt-32 sm:px-6 lg:px-8">
+      <div class="relative mx-auto flex min-h-[55svh] max-w-screen-2xl flex-col justify-end px-4 pb-8 pt-28 sm:min-h-[62vh] sm:px-6 sm:pb-10 sm:pt-32 lg:px-8">
         <p data-hero class="mb-4 translate-y-6 text-sm font-medium text-white/80 opacity-0">Blog</p>
         <h1 data-hero class="max-w-4xl translate-y-6 text-4xl font-medium leading-[0.95] tracking-tight text-white opacity-0 sm:text-6xl lg:text-7xl">Ideas for people who run fun for a living.</h1>
         <div class="mt-7 grid gap-6 border-t border-white/35 pt-6 md:grid-cols-12 md:items-end">
@@ -180,7 +183,7 @@
         </div>
       </div>
     </section>
-    <section class="bg-[#111213] py-20 sm:py-28">
+    <section class="bg-[#111213] py-14 sm:py-20 lg:py-28">
       <div class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <div data-reveal class="flex items-end justify-between border-b border-white/15 pb-8">
           <div>
@@ -192,84 +195,84 @@
         <div class="mt-8 grid gap-x-5 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
           <a href="https://www.semnox.com/enhancing-security-for-park-and-fec-operators/" target="_blank" rel="noopener" data-reveal class="group focus:outline-none focus:ring-2 focus:ring-[#f26a1e] focus:ring-offset-4 focus:ring-offset-[#111213]">
             <div class="aspect-[4/3] overflow-hidden rounded-md bg-white/10">
-              <img src="images/vr-ar.jpg" alt="" loading="lazy" class="h-full w-full object-cover grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0">
+              <img src="images/vr-ar.jpg" alt="" loading="lazy" decoding="async" class="h-full w-full object-cover sm:grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0">
             </div>
             <p class="mt-4 text-xs text-white/40">Security · 12 Apr 2024 · 6 min</p>
             <h3 class="mt-2 text-lg font-medium leading-snug transition-colors group-hover:text-[#f26a1e]">Enhancing Security for Park and FEC Operators</h3>
           </a>
           <a href="https://www.semnox.com/semnoxs-year-2023-in-review/" target="_blank" rel="noopener" data-reveal class="group focus:outline-none focus:ring-2 focus:ring-[#f26a1e] focus:ring-offset-4 focus:ring-offset-[#111213]">
             <div class="aspect-[4/3] overflow-hidden rounded-md bg-white/10">
-              <img src="images/hero-alt.jpg" alt="" loading="lazy" class="h-full w-full object-cover grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0">
+              <img src="images/hero-alt.jpg" alt="" loading="lazy" decoding="async" class="h-full w-full object-cover sm:grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0">
             </div>
             <p class="mt-4 text-xs text-white/40">Company · 25 Dec 2023 · 8 min</p>
             <h3 class="mt-2 text-lg font-medium leading-snug transition-colors group-hover:text-[#f26a1e]">Semnox's Year in Review: Achievements, Innovations, and Industry Impact</h3>
           </a>
           <a href="https://www.semnox.com/crm-software-for-entertainment-venues-2/" target="_blank" rel="noopener" data-reveal class="group focus:outline-none focus:ring-2 focus:ring-[#f26a1e] focus:ring-offset-4 focus:ring-offset-[#111213]">
             <div class="aspect-[4/3] overflow-hidden rounded-md bg-white/10">
-              <img src="images/kids-play.jpg" alt="" loading="lazy" class="h-full w-full object-cover grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0">
+              <img src="images/kids-play.jpg" alt="" loading="lazy" decoding="async" class="h-full w-full object-cover sm:grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0">
             </div>
             <p class="mt-4 text-xs text-white/40">Guest Experience · 19 May 2021 · 7 min</p>
             <h3 class="mt-2 text-lg font-medium leading-snug transition-colors group-hover:text-[#f26a1e]">How to Anticipate Your Guest's Needs and Deliver Delight Consistently</h3>
           </a>
           <a href="https://www.semnox.com/cross-sell-and-up-sell-for-fec-and-park-operators/" target="_blank" rel="noopener" data-reveal class="group focus:outline-none focus:ring-2 focus:ring-[#f26a1e] focus:ring-offset-4 focus:ring-offset-[#111213]">
             <div class="aspect-[4/3] overflow-hidden rounded-md bg-white/10">
-              <img src="images/fec.jpg" alt="" loading="lazy" class="h-full w-full object-cover grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0">
+              <img src="images/fec.jpg" alt="" loading="lazy" decoding="async" class="h-full w-full object-cover sm:grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0">
             </div>
             <p class="mt-4 text-xs text-white/40">Revenue · 12 May 2021 · 6 min</p>
             <h3 class="mt-2 text-lg font-medium leading-snug transition-colors group-hover:text-[#f26a1e]">Cross-Sell and Up-Sell: Opportunities for FEC and Park Operators</h3>
           </a>
           <a href="https://www.semnox.com/redemption-kiosk-for-arcades/" target="_blank" rel="noopener" data-reveal class="group focus:outline-none focus:ring-2 focus:ring-[#f26a1e] focus:ring-offset-4 focus:ring-offset-[#111213]">
             <div class="aspect-[4/3] overflow-hidden rounded-md bg-white/10">
-              <img src="images/trampoline.jpg" alt="" loading="lazy" class="h-full w-full object-cover grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0">
+              <img src="images/trampoline.jpg" alt="" loading="lazy" decoding="async" class="h-full w-full object-cover sm:grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0">
             </div>
             <p class="mt-4 text-xs text-white/40">Product · 5 May 2021 · 4 min</p>
             <h3 class="mt-2 text-lg font-medium leading-snug transition-colors group-hover:text-[#f26a1e]">Parafait Klaimprize: A Cutting-Edge Redemption Kiosk for Arcades</h3>
           </a>
           <a href="https://www.semnox.com/fec-digital-transformation-guide/" target="_blank" rel="noopener" data-reveal class="group focus:outline-none focus:ring-2 focus:ring-[#f26a1e] focus:ring-offset-4 focus:ring-offset-[#111213]">
             <div class="aspect-[4/3] overflow-hidden rounded-md bg-white/10">
-              <img src="images/foodcourt.jpg" alt="" loading="lazy" class="h-full w-full object-cover grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0">
+              <img src="images/foodcourt.jpg" alt="" loading="lazy" decoding="async" class="h-full w-full object-cover sm:grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0">
             </div>
             <p class="mt-4 text-xs text-white/40">Guides · 30 Apr 2021 · 12 min</p>
             <h3 class="mt-2 text-lg font-medium leading-snug transition-colors group-hover:text-[#f26a1e]">FEC Digital Transformation: The Complete Guide</h3>
           </a>
           <a href="https://www.semnox.com/data-visualization-benefits/" target="_blank" rel="noopener" data-reveal class="group focus:outline-none focus:ring-2 focus:ring-[#f26a1e] focus:ring-offset-4 focus:ring-offset-[#111213]">
             <div class="aspect-[4/3] overflow-hidden rounded-md bg-white/10">
-              <img src="images/museum.jpg" alt="" loading="lazy" class="h-full w-full object-cover grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0">
+              <img src="images/museum.jpg" alt="" loading="lazy" decoding="async" class="h-full w-full object-cover sm:grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0">
             </div>
             <p class="mt-4 text-xs text-white/40">Analytics · 22 Apr 2021 · 5 min</p>
             <h3 class="mt-2 text-lg font-medium leading-snug transition-colors group-hover:text-[#f26a1e]">Making Data Work for You: Why Visualization Is Key</h3>
           </a>
           <a href="https://www.semnox.com/parafait-maintenance-module/" target="_blank" rel="noopener" data-reveal class="group focus:outline-none focus:ring-2 focus:ring-[#f26a1e] focus:ring-offset-4 focus:ring-offset-[#111213]">
             <div class="aspect-[4/3] overflow-hidden rounded-md bg-white/10">
-              <img src="images/theme-parks.jpg" alt="" loading="lazy" class="h-full w-full object-cover grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0">
+              <img src="images/theme-parks.jpg" alt="" loading="lazy" decoding="async" class="h-full w-full object-cover sm:grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0">
             </div>
             <p class="mt-4 text-xs text-white/40">Operations · 21 Apr 2021 · 6 min</p>
             <h3 class="mt-2 text-lg font-medium leading-snug transition-colors group-hover:text-[#f26a1e]">How to Prolong the Life of Your Theme Park Assets</h3>
           </a>
           <a href="https://www.semnox.com/radian-wristband-timekeeping/" target="_blank" rel="noopener" data-reveal class="group focus:outline-none focus:ring-2 focus:ring-[#f26a1e] focus:ring-offset-4 focus:ring-offset-[#111213]">
             <div class="aspect-[4/3] overflow-hidden rounded-md bg-white/10">
-              <img src="images/water-parks.jpg" alt="" loading="lazy" class="h-full w-full object-cover grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0">
+              <img src="images/water-parks.jpg" alt="" loading="lazy" decoding="async" class="h-full w-full object-cover sm:grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0">
             </div>
             <p class="mt-4 text-xs text-white/40">Product · 20 Apr 2021 · 4 min</p>
             <h3 class="mt-2 text-lg font-medium leading-snug transition-colors group-hover:text-[#f26a1e]">Time Keeping with Radian: The RFID Wristband for Trampoline Parks</h3>
           </a>
           <a href="https://www.semnox.com/theme-park-digital-transformation/" target="_blank" rel="noopener" data-reveal class="group focus:outline-none focus:ring-2 focus:ring-[#f26a1e] focus:ring-offset-4 focus:ring-offset-[#111213]">
             <div class="aspect-[4/3] overflow-hidden rounded-md bg-white/10">
-              <img src="images/aquarium.jpg" alt="" loading="lazy" class="h-full w-full object-cover grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0">
+              <img src="images/aquarium.jpg" alt="" loading="lazy" decoding="async" class="h-full w-full object-cover sm:grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0">
             </div>
             <p class="mt-4 text-xs text-white/40">Guides · 30 Mar 2021 · 11 min</p>
             <h3 class="mt-2 text-lg font-medium leading-snug transition-colors group-hover:text-[#f26a1e]">Theme Park Digital Transformation: The Complete Guide</h3>
           </a>
           <a href="https://www.semnox.com/web-based-inventory-management/" target="_blank" rel="noopener" data-reveal class="group focus:outline-none focus:ring-2 focus:ring-[#f26a1e] focus:ring-offset-4 focus:ring-offset-[#111213]">
             <div class="aspect-[4/3] overflow-hidden rounded-md bg-white/10">
-              <img src="images/restaurant.jpg" alt="" loading="lazy" class="h-full w-full object-cover grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0">
+              <img src="images/restaurant.jpg" alt="" loading="lazy" decoding="async" class="h-full w-full object-cover sm:grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0">
             </div>
             <p class="mt-4 text-xs text-white/40">Operations · 2022 · 5 min</p>
             <h3 class="mt-2 text-lg font-medium leading-snug transition-colors group-hover:text-[#f26a1e]">Centralized Inventory Management: Why Park and FEC Chains Need It</h3>
           </a>
           <a href="https://www.semnox.com/rfid-ticketing-amusement-water-parks/" target="_blank" rel="noopener" data-reveal class="group focus:outline-none focus:ring-2 focus:ring-[#f26a1e] focus:ring-offset-4 focus:ring-offset-[#111213]">
             <div class="aspect-[4/3] overflow-hidden rounded-md bg-white/10">
-              <img src="images/hero-park.jpg" alt="" loading="lazy" class="h-full w-full object-cover grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0">
+              <img src="images/hero-park.jpg" alt="" loading="lazy" decoding="async" class="h-full w-full object-cover sm:grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0">
             </div>
             <p class="mt-4 text-xs text-white/40">Cashless · 2021 · 6 min</p>
             <h3 class="mt-2 text-lg font-medium leading-snug transition-colors group-hover:text-[#f26a1e]">How RFID Technology is Transforming Ticketing</h3>

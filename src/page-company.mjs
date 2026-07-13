@@ -9,7 +9,7 @@ export const aboutBody = interiorHero({
   tint: "#e8631a",
   links: [{ href: "our-team.html", label: "Meet the team", primary: true }, { href: "clients.html", label: "Our clients" }],
 }) + `
-    <section class="bg-[#111213] py-20 sm:py-28">
+    <section class="bg-[#111213] py-14 sm:py-20 lg:py-28">
       <div class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <div class="grid gap-12 lg:grid-cols-12">
           <div data-reveal class="lg:col-span-5">
@@ -36,7 +36,7 @@ export const aboutBody = interiorHero({
       </div>
     </section>
 
-    <section class="bg-[#e9e7e1] py-20 text-black sm:py-28">
+    <section class="bg-[#e9e7e1] py-14 text-black sm:py-20 lg:py-28">
       <div class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <div data-reveal class="border-b border-black/20 pb-10">
           <p class="text-sm text-black/50">What we stand for</p>
@@ -52,7 +52,7 @@ ${values.map(v => `          <article data-reveal class="rounded-md border borde
       </div>
     </section>
 
-    <section class="bg-[#111213] py-20 sm:py-28">
+    <section class="bg-[#111213] py-14 sm:py-20 lg:py-28">
       <div class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <div class="grid gap-10 lg:grid-cols-12">
           <div data-reveal class="lg:col-span-4">
@@ -73,17 +73,6 @@ ${values.map(v => `          <article data-reveal class="rounded-md border borde
           </div>
         </div>
       </div>
-    </section>
-
-    <section class="bg-[#f26a1e] py-20 text-black sm:py-28">
-      <div data-reveal class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
-          <h2 class="max-w-4xl text-5xl font-medium leading-[0.95] tracking-tight sm:text-7xl">Meet the people behind the platform.</h2>
-          <a href="our-team.html" class="group inline-flex min-h-14 shrink-0 items-center justify-center gap-3 self-start rounded-md bg-black px-7 text-base font-medium text-white transition-colors hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#f26a1e] lg:self-auto">
-            Our leadership <i data-lucide="arrow-up-right" class="h-5 w-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"></i>
-          </a>
-        </div>
-      </div>
     </section>`;
 
 export const teamBody = interiorHero({
@@ -94,7 +83,7 @@ export const teamBody = interiorHero({
   tint: "#e8631a",
   links: [{ href: "careers.html", label: "Join the team", primary: true }],
 }) + `
-    <section class="bg-[#111213] py-20 sm:py-28">
+    <section class="bg-[#111213] py-14 sm:py-20 lg:py-28">
       <div class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <div data-reveal class="flex items-end justify-between border-b border-white/15 pb-8">
           <div>
@@ -106,7 +95,7 @@ export const teamBody = interiorHero({
         <div class="mt-10 grid grid-cols-2 gap-x-5 gap-y-10 sm:grid-cols-3 lg:grid-cols-4">
 ${team.map(m => `          <div data-reveal class="group">
             <div class="relative aspect-[4/5] overflow-hidden rounded-md bg-[#191a1b]">
-              <img src="${m.img}" alt="${m.name}" loading="lazy" class="h-full w-full object-cover object-top grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0">
+              <img src="${m.img}" alt="${m.name}" loading="lazy" decoding="async" class="h-full w-full object-cover object-top sm:grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0">
               <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
             </div>
             <h3 class="mt-4 text-lg font-medium">${m.name}</h3>
@@ -129,13 +118,13 @@ ${team.map(m => `          <div data-reveal class="group">
 
 export const clientsBody = interiorHero({
   kicker: "Our clients",
-  title: "2,800+ venues. 60+ countries. One platform.",
+  title: "400+ operators. 2,800+ venues. One platform.",
   lede: "From single-location arcades to global franchise chains and destination parks, operators everywhere trust Semnox with their busiest days.",
   image: "images/theme-parks.jpg",
   tint: "#e8631a",
   links: [{ href: "testimonials.html", label: "What they say", primary: true }, { href: "case-studies.html", label: "Case studies" }],
 }) + `
-    <section class="bg-[#111213] py-20 sm:py-28">
+    <section class="bg-[#111213] py-14 sm:py-20 lg:py-28">
       <div class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
 ${clientRegions.map((r, idx) => `        <div data-reveal class="${idx === 0 ? "" : "mt-16 "}border-b border-white/15 pb-6">
           <div class="flex items-end justify-between">
@@ -149,7 +138,7 @@ ${r.clients.map(c => `          <span data-reveal class="rounded-md border borde
       </div>
     </section>
 
-    <section class="bg-[#f26a1e] py-20 text-black sm:py-28">
+    <section class="bg-[#f26a1e] py-14 text-black sm:py-20 lg:py-28">
       <div data-reveal class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <div class="grid gap-10 lg:grid-cols-12">
           <i data-lucide="quote" class="h-10 w-10 lg:col-span-2"></i>
@@ -172,7 +161,7 @@ export const partnersBody = interiorHero({
   tint: "#143a45",
   links: [{ href: "contact-us.html", label: "Become a partner", primary: true }],
 }) + `
-    <section class="bg-[#111213] py-20 sm:py-28">
+    <section class="bg-[#111213] py-14 sm:py-20 lg:py-28">
       <div class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
 ${partnerGroups.map((g, idx) => `        <div data-reveal class="${idx === 0 ? "" : "mt-16 "}flex items-center gap-4 border-b border-white/15 pb-6">
           <i data-lucide="${g.icon}" class="h-7 w-7 text-[#f26a1e]"></i>
@@ -187,7 +176,7 @@ ${g.partners.map(p => `          <div data-reveal class="flex items-center justi
       </div>
     </section>
 
-    <section class="bg-[#e9e7e1] py-20 text-black sm:py-28">
+    <section class="bg-[#e9e7e1] py-14 text-black sm:py-20 lg:py-28">
       <div data-reveal class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
           <div>
@@ -208,7 +197,7 @@ export const associationsBody = interiorHero({
   image: "images/museum.jpg",
   tint: "#e8631a",
 }) + `
-    <section class="bg-[#111213] py-20 sm:py-28">
+    <section class="bg-[#111213] py-14 sm:py-20 lg:py-28">
       <div class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <div data-reveal class="flex items-end justify-between border-b border-white/15 pb-8">
           <h2 class="text-4xl font-medium tracking-tight sm:text-5xl">Memberships</h2>

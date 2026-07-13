@@ -2,7 +2,7 @@
 <html lang="en" class="scroll-smooth bg-[#111213]">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="description" content="Meet the global leadership team behind Semnox.">
 <meta property="og:title" content="Our Team | Semnox Solutions">
 <meta property="og:description" content="Meet the global leadership team behind Semnox.">
@@ -22,6 +22,9 @@
   @media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }
   .grain { position: absolute; inset: 0; pointer-events: none; opacity: .5; mix-blend-mode: overlay; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E"); }
   .stat-figure { font-variant-numeric: tabular-nums; letter-spacing: -0.05em; }
+  html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  * { -webkit-tap-highlight-color: transparent; }
+  @media (max-width: 640px) { .marquee-track { animation-duration: 26s; } }
 </style>
 </head>
 
@@ -171,7 +174,7 @@
         <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/50"></div>
         <div class="grain"></div>
       </div>
-      <div class="relative mx-auto flex min-h-[62vh] max-w-screen-2xl flex-col justify-end px-4 pb-10 pt-32 sm:px-6 lg:px-8">
+      <div class="relative mx-auto flex min-h-[55svh] max-w-screen-2xl flex-col justify-end px-4 pb-8 pt-28 sm:min-h-[62vh] sm:px-6 sm:pb-10 sm:pt-32 lg:px-8">
         <p data-hero class="mb-4 translate-y-6 text-sm font-medium text-white/80 opacity-0">Our team</p>
         <h1 data-hero class="max-w-4xl translate-y-6 text-4xl font-medium leading-[0.95] tracking-tight text-white opacity-0 sm:text-6xl lg:text-7xl">A wide range of skills. One shared obsession.</h1>
         <div class="mt-7 grid gap-6 border-t border-white/35 pt-6 md:grid-cols-12 md:items-end">
@@ -182,7 +185,7 @@
         </div>
       </div>
     </section>
-    <section class="bg-[#111213] py-20 sm:py-28">
+    <section class="bg-[#111213] py-14 sm:py-20 lg:py-28">
       <div class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <div data-reveal class="flex items-end justify-between border-b border-white/15 pb-8">
           <div>
@@ -194,7 +197,7 @@
         <div class="mt-10 grid grid-cols-2 gap-x-5 gap-y-10 sm:grid-cols-3 lg:grid-cols-4">
           <div data-reveal class="group">
             <div class="relative aspect-[4/5] overflow-hidden rounded-md bg-[#191a1b]">
-              <img src="images/team/iqbal.webp" alt="Iqbal Mohammad" loading="lazy" class="h-full w-full object-cover object-top grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0">
+              <img src="images/team/iqbal.webp" alt="Iqbal Mohammad" loading="lazy" decoding="async" class="h-full w-full object-cover object-top sm:grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0">
               <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
             </div>
             <h3 class="mt-4 text-lg font-medium">Iqbal Mohammad</h3>
@@ -202,7 +205,7 @@
           </div>
           <div data-reveal class="group">
             <div class="relative aspect-[4/5] overflow-hidden rounded-md bg-[#191a1b]">
-              <img src="images/team/kiran.png" alt="Kiran Karanki" loading="lazy" class="h-full w-full object-cover object-top grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0">
+              <img src="images/team/kiran.png" alt="Kiran Karanki" loading="lazy" decoding="async" class="h-full w-full object-cover object-top sm:grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0">
               <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
             </div>
             <h3 class="mt-4 text-lg font-medium">Kiran Karanki</h3>
@@ -210,7 +213,7 @@
           </div>
           <div data-reveal class="group">
             <div class="relative aspect-[4/5] overflow-hidden rounded-md bg-[#191a1b]">
-              <img src="images/team/umesh.png" alt="Umesh Prabhu" loading="lazy" class="h-full w-full object-cover object-top grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0">
+              <img src="images/team/umesh.png" alt="Umesh Prabhu" loading="lazy" decoding="async" class="h-full w-full object-cover object-top sm:grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0">
               <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
             </div>
             <h3 class="mt-4 text-lg font-medium">Umesh Prabhu</h3>
@@ -218,7 +221,7 @@
           </div>
           <div data-reveal class="group">
             <div class="relative aspect-[4/5] overflow-hidden rounded-md bg-[#191a1b]">
-              <img src="images/team/bepin.webp" alt="Bepin Jose" loading="lazy" class="h-full w-full object-cover object-top grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0">
+              <img src="images/team/bepin.webp" alt="Bepin Jose" loading="lazy" decoding="async" class="h-full w-full object-cover object-top sm:grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0">
               <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
             </div>
             <h3 class="mt-4 text-lg font-medium">Bepin Jose</h3>
@@ -226,7 +229,7 @@
           </div>
           <div data-reveal class="group">
             <div class="relative aspect-[4/5] overflow-hidden rounded-md bg-[#191a1b]">
-              <img src="images/team/ashish.webp" alt="Ashish KS" loading="lazy" class="h-full w-full object-cover object-top grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0">
+              <img src="images/team/ashish.webp" alt="Ashish KS" loading="lazy" decoding="async" class="h-full w-full object-cover object-top sm:grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0">
               <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
             </div>
             <h3 class="mt-4 text-lg font-medium">Ashish KS</h3>
@@ -234,7 +237,7 @@
           </div>
           <div data-reveal class="group">
             <div class="relative aspect-[4/5] overflow-hidden rounded-md bg-[#191a1b]">
-              <img src="images/team/mathew.webp" alt="Mathew Ninan" loading="lazy" class="h-full w-full object-cover object-top grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0">
+              <img src="images/team/mathew.webp" alt="Mathew Ninan" loading="lazy" decoding="async" class="h-full w-full object-cover object-top sm:grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0">
               <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
             </div>
             <h3 class="mt-4 text-lg font-medium">Mathew Ninan</h3>
@@ -242,7 +245,7 @@
           </div>
           <div data-reveal class="group">
             <div class="relative aspect-[4/5] overflow-hidden rounded-md bg-[#191a1b]">
-              <img src="images/team/prashanth.webp" alt="Prashanth Menon" loading="lazy" class="h-full w-full object-cover object-top grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0">
+              <img src="images/team/prashanth.webp" alt="Prashanth Menon" loading="lazy" decoding="async" class="h-full w-full object-cover object-top sm:grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0">
               <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
             </div>
             <h3 class="mt-4 text-lg font-medium">Prashanth Menon</h3>
@@ -250,7 +253,7 @@
           </div>
           <div data-reveal class="group">
             <div class="relative aspect-[4/5] overflow-hidden rounded-md bg-[#191a1b]">
-              <img src="images/team/deepak.webp" alt="Deepak Pillai" loading="lazy" class="h-full w-full object-cover object-top grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0">
+              <img src="images/team/deepak.webp" alt="Deepak Pillai" loading="lazy" decoding="async" class="h-full w-full object-cover object-top sm:grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0">
               <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
             </div>
             <h3 class="mt-4 text-lg font-medium">Deepak Pillai</h3>
@@ -258,7 +261,7 @@
           </div>
           <div data-reveal class="group">
             <div class="relative aspect-[4/5] overflow-hidden rounded-md bg-[#191a1b]">
-              <img src="images/team/ananya.png" alt="Ananya Hebbar" loading="lazy" class="h-full w-full object-cover object-top grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0">
+              <img src="images/team/ananya.png" alt="Ananya Hebbar" loading="lazy" decoding="async" class="h-full w-full object-cover object-top sm:grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0">
               <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
             </div>
             <h3 class="mt-4 text-lg font-medium">Ananya Hebbar</h3>
@@ -266,7 +269,7 @@
           </div>
           <div data-reveal class="group">
             <div class="relative aspect-[4/5] overflow-hidden rounded-md bg-[#191a1b]">
-              <img src="images/team/rakesh.webp" alt="Rakesh Devadiga" loading="lazy" class="h-full w-full object-cover object-top grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0">
+              <img src="images/team/rakesh.webp" alt="Rakesh Devadiga" loading="lazy" decoding="async" class="h-full w-full object-cover object-top sm:grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0">
               <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
             </div>
             <h3 class="mt-4 text-lg font-medium">Rakesh Devadiga</h3>
@@ -274,7 +277,7 @@
           </div>
           <div data-reveal class="group">
             <div class="relative aspect-[4/5] overflow-hidden rounded-md bg-[#191a1b]">
-              <img src="images/team/aravinda.png" alt="Aravinda Shetty" loading="lazy" class="h-full w-full object-cover object-top grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0">
+              <img src="images/team/aravinda.png" alt="Aravinda Shetty" loading="lazy" decoding="async" class="h-full w-full object-cover object-top sm:grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0">
               <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
             </div>
             <h3 class="mt-4 text-lg font-medium">Aravinda Shetty</h3>

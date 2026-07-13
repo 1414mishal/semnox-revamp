@@ -1,7 +1,7 @@
 import { industries, testimonials, blogPosts } from "./data.mjs";
 
 const solutionCards = `
-        <article data-reveal class="group relative flex min-h-[26rem] flex-col justify-between overflow-hidden rounded-md border border-white/15 bg-[#191a1b] p-6 transition duration-300 hover:-translate-y-1 hover:border-[#f26a1e]/70 sm:p-8">
+        <article data-reveal class="group relative flex min-h-[20rem] sm:min-h-[26rem] flex-col justify-between overflow-hidden rounded-md border border-white/15 bg-[#191a1b] p-6 transition duration-300 hover:-translate-y-1 hover:border-[#f26a1e]/70 sm:p-8">
           <div class="flex items-start justify-between">
             <span class="text-sm text-white/45">01</span>
             <i data-lucide="gamepad-2" class="h-7 w-7 text-[#f26a1e]"></i>
@@ -18,7 +18,7 @@ const solutionCards = `
           </div>
         </article>
 
-        <article data-reveal class="group relative flex min-h-[26rem] flex-col justify-between overflow-hidden rounded-md border border-white/15 bg-[#143a45] p-6 transition duration-300 hover:-translate-y-1 hover:border-cyan-300/70 sm:p-8">
+        <article data-reveal class="group relative flex min-h-[20rem] sm:min-h-[26rem] flex-col justify-between overflow-hidden rounded-md border border-white/15 bg-[#143a45] p-6 transition duration-300 hover:-translate-y-1 hover:border-cyan-300/70 sm:p-8">
           <div class="flex items-start justify-between">
             <span class="text-sm text-white/45">02</span>
             <i data-lucide="ferris-wheel" class="h-7 w-7 text-cyan-200"></i>
@@ -35,7 +35,7 @@ const solutionCards = `
           </div>
         </article>
 
-        <article data-reveal class="group relative flex min-h-[26rem] flex-col justify-between overflow-hidden rounded-md border border-white/15 bg-[#a91f18] p-6 transition duration-300 hover:-translate-y-1 hover:border-red-200/70 sm:p-8">
+        <article data-reveal class="group relative flex min-h-[20rem] sm:min-h-[26rem] flex-col justify-between overflow-hidden rounded-md border border-white/15 bg-[#a91f18] p-6 transition duration-300 hover:-translate-y-1 hover:border-red-200/70 sm:p-8">
           <div class="flex items-start justify-between">
             <span class="text-sm text-white/50">03</span>
             <i data-lucide="utensils" class="h-7 w-7 text-red-100"></i>
@@ -53,17 +53,17 @@ const solutionCards = `
         </article>`;
 
 export const homeBody = `
-    <section id="home" class="relative min-h-screen overflow-hidden bg-[#e8631a]">
+    <section id="home" class="relative min-h-[100svh] overflow-hidden bg-[#e8631a]">
       <div class="absolute inset-0">
         <img src="images/hero-park.jpg" alt="Guests enjoying an amusement park powered by Semnox" data-hero-image class="h-full w-full scale-[1.07] object-cover object-center mix-blend-multiply" fetchpriority="high">
         <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/45"></div>
         <div class="grain"></div>
       </div>
 
-      <div class="relative mx-auto flex min-h-screen max-w-screen-2xl flex-col justify-end px-4 pb-8 pt-28 sm:px-6 sm:pb-10 lg:px-8">
+      <div class="relative mx-auto flex min-h-[100svh] max-w-screen-2xl flex-col justify-end px-4 pb-8 pt-28 sm:px-6 sm:pb-10 lg:px-8">
         <div class="max-w-5xl">
           <p data-hero class="mb-5 translate-y-6 text-sm font-medium text-white/80 opacity-0">
-            Entertainment technology · 2,800+ sites · 60+ countries
+            Entertainment technology, since 2008
           </p>
           <h1 data-hero class="max-w-5xl translate-y-6 text-5xl font-medium leading-[0.92] tracking-tight text-white opacity-0 sm:text-7xl lg:text-8xl">
             We power the world's best days out.
@@ -84,13 +84,6 @@ export const homeBody = `
           </div>
         </div>
 
-        <div data-hero class="mt-9 flex translate-y-6 items-center justify-between text-xs text-white/70 opacity-0">
-          <span>Trusted by Chuck E. Cheese, Smaaash, Fantasy Island, Dubai Garden Glow, and more</span>
-          <a href="#proof" class="hidden min-h-11 items-center gap-2 transition-colors hover:text-white focus:outline-none focus:ring-2 focus:ring-white sm:inline-flex">
-            Scroll to discover
-            <i data-lucide="arrow-down" class="h-4 w-4"></i>
-          </a>
-        </div>
       </div>
     </section>
 
@@ -104,21 +97,21 @@ ${["Chuck E. Cheese", "Smaaash", "Fantasy Island", "Dubai Garden Glow", "Monster
 
     <section id="proof" class="border-b border-white/15 bg-[#111213]">
       <div class="mx-auto max-w-screen-2xl px-4 py-14 sm:px-6 lg:px-8">
-        <div class="grid gap-y-10 md:grid-cols-2 lg:grid-cols-4 lg:gap-y-0">
+        <div class="grid grid-cols-2 gap-x-5 gap-y-10 lg:grid-cols-4 lg:gap-y-0">
           <div data-reveal class="flex flex-col justify-between gap-6 border-white/15 pr-8 lg:border-r">
-            <p class="stat-figure text-6xl font-semibold leading-none sm:text-7xl">2,800<span class="text-[#f26a1e]">+</span></p>
+            <p class="stat-figure text-4xl font-semibold leading-none sm:text-6xl lg:text-7xl">2,800<span class="text-[#f26a1e]">+</span></p>
             <p class="max-w-[16ch] text-sm leading-snug text-white/50">venues open their gates on Semnox</p>
           </div>
           <div data-reveal class="flex flex-col justify-between gap-6 border-white/15 lg:border-r lg:px-8">
-            <p class="stat-figure text-6xl font-semibold leading-none sm:text-7xl">60<span class="text-[#f26a1e]">+</span></p>
+            <p class="stat-figure text-4xl font-semibold leading-none sm:text-6xl lg:text-7xl">60<span class="text-[#f26a1e]">+</span></p>
             <p class="max-w-[16ch] text-sm leading-snug text-white/50">countries, from Texas to Tasmania</p>
           </div>
           <div data-reveal class="flex flex-col justify-between gap-6 border-white/15 lg:border-r lg:px-8">
-            <p class="stat-figure text-6xl font-semibold leading-none sm:text-7xl">2<span class="text-[#f26a1e]">x</span></p>
+            <p class="stat-figure text-4xl font-semibold leading-none sm:text-6xl lg:text-7xl">2<span class="text-[#f26a1e]">x</span></p>
             <p class="max-w-[16ch] text-sm leading-snug text-white/50">IAAPA Brass Ring Awards, the industry's highest honor</p>
           </div>
           <div data-reveal class="flex flex-col justify-between gap-6 lg:pl-8">
-            <p class="stat-figure text-6xl font-semibold leading-none sm:text-7xl">0<span class="text-[#f26a1e]">:00</span></p>
+            <p class="stat-figure text-4xl font-semibold leading-none sm:text-6xl lg:text-7xl">0<span class="text-[#f26a1e]">:00</span></p>
             <p class="max-w-[18ch] text-sm leading-snug text-white/50">hours per year our support engineers are offline</p>
           </div>
         </div>
@@ -126,7 +119,7 @@ ${["Chuck E. Cheese", "Smaaash", "Fantasy Island", "Dubai Garden Glow", "Monster
       </div>
     </section>
 
-    <section id="solutions" class="bg-[#111213] py-20 sm:py-28">
+    <section id="solutions" class="bg-[#111213] py-14 sm:py-20 lg:py-28">
       <div class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <div data-reveal class="grid gap-8 border-b border-white/15 pb-12 lg:grid-cols-12">
           <div class="lg:col-span-4">
@@ -160,17 +153,17 @@ ${solutionCards}
         <div class="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
 ${industries.map(ind => `          <a href="${ind.href}" data-reveal class="group block focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-4 focus:ring-offset-[#e9e7e1]">
             <div class="relative aspect-[4/5] overflow-hidden rounded-md bg-[#c9c8c3]">
-              <img src="${ind.img}" alt="${ind.name}" loading="lazy" class="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-[1.05]">
+              <img src="${ind.img}" alt="${ind.name}" loading="lazy" decoding="async" class="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-[1.05]">
               <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
               <span class="absolute inset-x-3 bottom-3 text-sm font-medium leading-snug text-white">${ind.name}</span>
-              <span class="absolute right-3 top-3 inline-flex items-center rounded-md bg-black/70 p-1.5 text-white opacity-0 transition-opacity group-hover:opacity-100"><i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
+              <span class="absolute right-3 top-3 inline-flex items-center rounded-md bg-black/70 p-1.5 text-white opacity-100 transition-opacity sm:opacity-0 sm:group-hover:opacity-100"><i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></span>
             </div>
           </a>`).join("\n")}
         </div>
       </div>
     </section>
 
-    <section class="bg-[#f26a1e] py-20 text-black sm:py-28">
+    <section class="bg-[#f26a1e] py-14 text-black sm:py-20 lg:py-28">
       <div data-reveal class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <div class="grid gap-10 lg:grid-cols-12">
           <i data-lucide="quote" class="h-10 w-10 lg:col-span-2"></i>
@@ -192,7 +185,7 @@ ${industries.map(ind => `          <a href="${ind.href}" data-reveal class="grou
       </div>
     </section>
 
-    <section class="bg-[#111213] py-20 sm:py-28">
+    <section class="bg-[#111213] py-14 sm:py-20 lg:py-28">
       <div class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <div class="grid gap-12 lg:grid-cols-12">
           <div data-reveal class="lg:col-span-5">
@@ -273,7 +266,7 @@ ${industries.map(ind => `          <a href="${ind.href}" data-reveal class="grou
       </div>
     </section>
 
-    <section class="border-y border-white/15 bg-[#111213] py-20 sm:py-28">
+    <section class="border-y border-white/15 bg-[#111213] py-14 sm:py-20 lg:py-28">
       <div class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <div data-reveal class="flex items-end justify-between border-b border-white/15 pb-8">
           <div>
@@ -288,7 +281,7 @@ ${industries.map(ind => `          <a href="${ind.href}" data-reveal class="grou
         <div class="mt-8 grid gap-5 md:grid-cols-3">
 ${blogPosts.slice(0, 3).map(p => `          <a href="${p.url}" target="_blank" rel="noopener" data-reveal class="group focus:outline-none focus:ring-2 focus:ring-[#f26a1e] focus:ring-offset-4 focus:ring-offset-[#111213]">
             <div class="aspect-[4/3] overflow-hidden rounded-md bg-white/10">
-              <img src="${p.img}" alt="" loading="lazy" class="h-full w-full object-cover grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0">
+              <img src="${p.img}" alt="" loading="lazy" decoding="async" class="h-full w-full object-cover sm:grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0">
             </div>
             <p class="mt-4 text-xs text-white/40">${p.cat} · ${p.mins}</p>
             <h3 class="mt-2 text-lg font-medium leading-snug">${p.title}</h3>
@@ -297,7 +290,7 @@ ${blogPosts.slice(0, 3).map(p => `          <a href="${p.url}" target="_blank" r
       </div>
     </section>
 
-    <section id="contact" class="bg-[#f26a1e] py-20 text-black sm:py-28">
+    <section id="contact" class="bg-[#f26a1e] py-14 text-black sm:py-20 lg:py-28">
       <div data-reveal class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <p class="text-sm text-black/55">Planning a venue, an upgrade, or an expansion?</p>
         <div class="mt-5 flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">

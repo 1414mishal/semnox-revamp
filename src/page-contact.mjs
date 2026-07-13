@@ -8,7 +8,7 @@ export const contactBody = interiorHero({
   image: "images/hero-fec.jpg",
   tint: "#e8631a",
 }) + `
-    <section class="bg-[#111213] py-20 sm:py-28">
+    <section class="bg-[#111213] py-14 sm:py-20 lg:py-28">
       <div class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           <a href="mailto:corp.sales@semnox.com" data-reveal class="group rounded-md border border-white/15 bg-[#191a1b] p-6 transition duration-300 hover:-translate-y-1 hover:border-[#f26a1e]/70">
@@ -52,7 +52,7 @@ export const contactBody = interiorHero({
       </div>
     </section>
 
-    <section class="bg-[#e9e7e1] py-20 text-black sm:py-28">
+    <section class="bg-[#e9e7e1] py-14 text-black sm:py-20 lg:py-28">
       <div class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <div data-reveal class="border-b border-black/20 pb-10">
           <p class="text-sm text-black/50">Where we are</p>
@@ -69,7 +69,7 @@ ${offices.map(o => `          <article data-reveal class="rounded-md border bord
       </div>
     </section>
 
-    <section class="bg-[#f26a1e] py-20 text-black sm:py-28">
+    <section class="bg-[#f26a1e] py-14 text-black sm:py-20 lg:py-28">
       <div data-reveal class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <p class="text-sm text-black/55">Prefer email?</p>
         <div class="mt-5 flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
@@ -99,7 +99,7 @@ export const careersBody = interiorHero({
   tint: "#143a45",
   links: [{ href: "mailto:careers@semnox.com", label: "careers@semnox.com", primary: true }],
 }) + `
-    <section class="bg-[#111213] py-20 sm:py-28">
+    <section class="bg-[#111213] py-14 sm:py-20 lg:py-28">
       <div class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <div data-reveal class="flex items-end justify-between border-b border-white/15 pb-8">
           <div>
