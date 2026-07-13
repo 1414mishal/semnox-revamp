@@ -172,3 +172,138 @@ if (nowLine) {
   render();
   setInterval(render, 60000);
 }
+
+// Spotlight glow cards: one pointermove listener drives every [data-glow] card,
+// setting local pointer coordinates so the border ring and wash follow the mouse.
+const glowCards = [...document.querySelectorAll("[data-glow]")];
+if (glowCards.length && !reducedMotion && window.matchMedia("(pointer: fine)").matches) {
+  let glowFrame = null;
+  window.addEventListener("pointermove", e => {
+    if (glowFrame) return;
+    glowFrame = requestAnimationFrame(() => {
+      glowFrame = null;
+      for (const card of glowCards) {
+        const r = card.getBoundingClientRect();
+        const x = e.clientX - r.left;
+        const y = e.clientY - r.top;
+        card.style.setProperty("--gx", x + "px");
+        card.style.setProperty("--gy", y + "px");
+        const near = x > -120 && y > -120 && x < r.width + 120 && y < r.height + 120;
+        card.style.setProperty("--glow-active", near ? "1" : "0");
+      }
+    });
+  }, { passive: true });
+}
+
+// Digital aurora: a WebGL curtain in Semnox orange and Tixera teal behind the
+// closing call to action. Falls back to the CSS gradient already on the canvas.
+const auroraCanvas = document.querySelector("[data-aurora]");
+if (auroraCanvas && !reducedMotion) {
+  const gl = auroraCanvas.getContext("webgl", { antialias: false, alpha: false });
+  if (gl) {
+    const vertSrc = "attribute vec2 aPosition; void main(){ gl_Position = vec4(aPosition, 0.0, 1.0); }";
+    const fragSrc = `
+      precision highp float;
+      uniform vec2 iResolution;
+      uniform float iTime;
+      uniform vec2 iMouse;
+
+      float hash(vec2 p) {
+        p = fract(p * vec2(123.34, 456.21));
+        p += dot(p, p + 45.32);
+        return fract(p.x * p.y);
+      }
+      float noise(vec2 p) {
+        vec2 i = floor(p), f = fract(p);
+        f = f * f * (3.0 - 2.0 * f);
+        return mix(
+          mix(hash(i), hash(i + vec2(1.0, 0.0)), f.x),
+          mix(hash(i + vec2(0.0, 1.0)), hash(i + vec2(1.0, 1.0)), f.x), f.y);
+      }
+      float fbm(vec2 p) {
+        float v = 0.0, a = 0.5;
+        for (int i = 0; i < 5; i++) { v += a * noise(p); p *= 2.03; a *= 0.5; }
+        return v;
+      }
+
+      void main() {
+        vec2 uv = gl_FragCoord.xy / iResolution.xy;
+        vec2 m = iMouse / iResolution - 0.5;
+        float t = iTime * 0.35;
+        float x = uv.x * 3.0 + m.x * 0.7;
+
+        float wave = fbm(vec2(x * 1.15 + t * 0.32, t * 0.16));
+        float band = uv.y - 0.12 - wave * 0.6 + m.y * 0.12;
+        float curtain = exp(-abs(band) * 3.6);
+        float rays = fbm(vec2(x * 2.6 - t * 0.22, uv.y * 1.3 + t * 0.12));
+        float glow = curtain * (0.4 + 0.9 * rays);
+
+        vec3 warm = vec3(0.95, 0.42, 0.12);
+        vec3 cool = vec3(0.09, 0.52, 0.68);
+        float blend = clamp(0.5 + 0.5 * sin(x * 0.9 + t * 0.55), 0.0, 1.0);
+        vec3 col = mix(cool, warm, blend) * glow * 1.3;
+        col += warm * 0.06 * exp(-uv.y * 2.2);
+        col += vec3(0.02, 0.02, 0.025);
+        gl_FragColor = vec4(col, 1.0);
+      }`;
+
+    const compile = (src, type) => {
+      const shader = gl.createShader(type);
+      gl.shaderSource(shader, src);
+      gl.compileShader(shader);
+      return gl.getShaderParameter(shader, gl.COMPILE_STATUS) ? shader : null;
+    };
+    const vert = compile(vertSrc, gl.VERTEX_SHADER);
+    const frag = compile(fragSrc, gl.FRAGMENT_SHADER);
+    if (vert && frag) {
+      const program = gl.createProgram();
+      gl.attachShader(program, vert);
+      gl.attachShader(program, frag);
+      gl.linkProgram(program);
+      gl.useProgram(program);
+
+      const buffer = gl.createBuffer();
+      gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
+      gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, -1, 1, 1, -1, 1, 1]), gl.STATIC_DRAW);
+      const aPosition = gl.getAttribLocation(program, "aPosition");
+      gl.enableVertexAttribArray(aPosition);
+      gl.vertexAttribPointer(aPosition, 2, gl.FLOAT, false, 0, 0);
+
+      const uResolution = gl.getUniformLocation(program, "iResolution");
+      const uTime = gl.getUniformLocation(program, "iTime");
+      const uMouse = gl.getUniformLocation(program, "iMouse");
+
+      const mouse = { x: 0.5, y: 0.35 };
+      window.addEventListener("pointermove", e => {
+        const r = auroraCanvas.getBoundingClientRect();
+        mouse.x = (e.clientX - r.left) / Math.max(r.width, 1);
+        mouse.y = (e.clientY - r.top) / Math.max(r.height, 1);
+      }, { passive: true });
+
+      const resize = () => {
+        const scale = Math.min(window.devicePixelRatio || 1, 1.5);
+        auroraCanvas.width = Math.floor(auroraCanvas.clientWidth * scale);
+        auroraCanvas.height = Math.floor(auroraCanvas.clientHeight * scale);
+        gl.viewport(0, 0, auroraCanvas.width, auroraCanvas.height);
+        gl.uniform2f(uResolution, auroraCanvas.width, auroraCanvas.height);
+      };
+      window.addEventListener("resize", resize);
+      resize();
+
+      let visible = false;
+      let frameId = null;
+      const start = performance.now();
+      const loop = () => {
+        if (!visible || gl.isContextLost()) { frameId = null; return; }
+        gl.uniform1f(uTime, (performance.now() - start) / 1000);
+        gl.uniform2f(uMouse, mouse.x * auroraCanvas.width, (1 - mouse.y) * auroraCanvas.height);
+        gl.drawArrays(gl.TRIANGLES, 0, 6);
+        frameId = requestAnimationFrame(loop);
+      };
+      new IntersectionObserver(entries => {
+        visible = entries[0].isIntersecting;
+        if (visible && frameId === null) frameId = requestAnimationFrame(loop);
+      }).observe(auroraCanvas);
+    }
+  }
+}

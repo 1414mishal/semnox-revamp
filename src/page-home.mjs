@@ -1,7 +1,7 @@
 import { industries, testimonials, blogPosts } from "./data.mjs";
 
 const solutionCards = `
-        <article data-reveal class="group relative flex min-h-[20rem] sm:min-h-[26rem] flex-col justify-between overflow-hidden rounded-md border border-white/15 bg-[#191a1b] p-6 transition duration-300 hover:-translate-y-1 hover:border-[#f26a1e]/70 sm:p-8">
+        <article data-reveal data-glow style="--glow-hue: 25" class="group relative flex min-h-[20rem] sm:min-h-[26rem] flex-col justify-between rounded-md border border-white/15 bg-[#191a1b] p-6 transition duration-300 hover:-translate-y-1 sm:p-8">
           <div class="flex items-start justify-between">
             <span class="text-sm text-white/45">01</span>
             <i data-lucide="gamepad-2" class="h-7 w-7 text-[#f26a1e]"></i>
@@ -18,7 +18,7 @@ const solutionCards = `
           </div>
         </article>
 
-        <article data-reveal class="group relative flex min-h-[20rem] sm:min-h-[26rem] flex-col justify-between overflow-hidden rounded-md border border-white/15 bg-[#143a45] p-6 transition duration-300 hover:-translate-y-1 hover:border-cyan-300/70 sm:p-8">
+        <article data-reveal data-glow style="--glow-hue: 190" class="group relative flex min-h-[20rem] sm:min-h-[26rem] flex-col justify-between rounded-md border border-white/15 bg-[#143a45] p-6 transition duration-300 hover:-translate-y-1 sm:p-8">
           <div class="flex items-start justify-between">
             <span class="text-sm text-white/45">02</span>
             <i data-lucide="ferris-wheel" class="h-7 w-7 text-cyan-200"></i>
@@ -35,7 +35,7 @@ const solutionCards = `
           </div>
         </article>
 
-        <article data-reveal class="group relative flex min-h-[20rem] sm:min-h-[26rem] flex-col justify-between overflow-hidden rounded-md border border-white/15 bg-[#a91f18] p-6 transition duration-300 hover:-translate-y-1 hover:border-red-200/70 sm:p-8">
+        <article data-reveal data-glow style="--glow-hue: 8" class="group relative flex min-h-[20rem] sm:min-h-[26rem] flex-col justify-between rounded-md border border-white/15 bg-[#a91f18] p-6 transition duration-300 hover:-translate-y-1 sm:p-8">
           <div class="flex items-start justify-between">
             <span class="text-sm text-white/50">03</span>
             <i data-lucide="utensils" class="h-7 w-7 text-red-100"></i>
@@ -290,19 +290,24 @@ ${blogPosts.slice(0, 3).map(p => `          <a href="${p.url}" target="_blank" r
       </div>
     </section>
 
-    <section id="contact" class="bg-[#f26a1e] py-14 text-black sm:py-20 lg:py-28">
-      <div data-reveal class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
-        <p class="text-sm text-black/55">Planning a venue, an upgrade, or an expansion?</p>
+    <section id="contact" class="relative overflow-hidden bg-[#0b0c0d] py-16 sm:py-24 lg:py-32">
+      <div class="absolute inset-0" aria-hidden="true">
+        <canvas data-aurora class="h-full w-full" style="background: radial-gradient(120% 90% at 50% 110%, #3a1c08 0%, #16130f 45%, #0b0c0d 100%)"></canvas>
+        <div class="absolute inset-0 bg-gradient-to-b from-[#111213] via-transparent to-black/60"></div>
+        <div class="grain"></div>
+      </div>
+      <div data-reveal class="relative mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
+        <p class="text-sm font-medium text-[#f9a25c]">Planning a venue, an upgrade, or an expansion?</p>
         <div class="mt-5 flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
-          <h2 class="max-w-5xl text-5xl font-medium leading-[0.95] tracking-tight sm:text-7xl lg:text-8xl">
+          <h2 class="max-w-5xl text-5xl font-medium leading-[0.95] tracking-tight text-white sm:text-7xl lg:text-8xl">
             Let's make your venue unforgettable.
           </h2>
-          <a href="mailto:corp.sales@semnox.com" class="group inline-flex min-h-14 shrink-0 items-center justify-center gap-3 self-start rounded-md bg-black px-7 text-base font-medium text-white transition-colors hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#f26a1e] lg:self-auto">
+          <a href="mailto:corp.sales@semnox.com" class="group inline-flex min-h-14 shrink-0 items-center justify-center gap-3 self-start rounded-md bg-[#f26a1e] px-7 text-base font-medium text-black transition-colors hover:bg-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black lg:self-auto">
             corp.sales@semnox.com
             <i data-lucide="arrow-up-right" class="h-5 w-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"></i>
           </a>
         </div>
-        <div class="mt-14 flex flex-col gap-3 border-t border-black/25 pt-6 text-sm text-black/60 sm:flex-row sm:items-center sm:justify-between">
+        <div class="mt-14 flex flex-col gap-3 border-t border-white/20 pt-6 text-sm text-white/60 sm:flex-row sm:items-center sm:justify-between">
           <span>Demos are live, on your use case, with a real solutions engineer.</span>
           <span>Offices in India, USA, UAE, China, and the UK.</span>
         </div>

@@ -186,6 +186,29 @@ export const pageShell = ({ file, title, desc, active = "", body }) => `<!DOCTYP
   @media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }
   .grain { position: absolute; inset: 0; pointer-events: none; opacity: .5; mix-blend-mode: overlay; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E"); }
   .stat-figure { font-variant-numeric: tabular-nums; letter-spacing: -0.05em; }
+  /* Spotlight glow cards: a hue-tinted border ring plus a soft interior wash
+     that both track the pointer. Ported from the React spotlight-card. */
+  [data-glow] { --gx: 50%; --gy: 50%; --glow-active: 0; }
+  [data-glow]::before,
+  [data-glow]::after {
+    content: ""; position: absolute; inset: 0; border-radius: inherit;
+    pointer-events: none; opacity: var(--glow-active);
+    transition: opacity .45s ease;
+  }
+  [data-glow]::before {
+    border: 1px solid transparent;
+    background: radial-gradient(240px 240px at var(--gx) var(--gy),
+      hsl(var(--glow-hue, 25) 92% 60% / .95), transparent 72%) border-box;
+    -webkit-mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0);
+    mask-composite: exclude;
+    filter: brightness(1.6);
+  }
+  [data-glow]::after {
+    background: radial-gradient(340px 340px at var(--gx) var(--gy),
+      hsl(var(--glow-hue, 25) 95% 62% / .10), transparent 68%);
+  }
   html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
   * { -webkit-tap-highlight-color: transparent; }
   @media (max-width: 640px) { .marquee-track { animation-duration: 26s; } }
