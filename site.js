@@ -289,6 +289,7 @@ if (auroraCanvas && !reducedMotion) {
       };
       window.addEventListener("resize", resize);
       resize();
+      new ResizeObserver(resize).observe(auroraCanvas);
 
       let visible = false;
       let frameId = null;
