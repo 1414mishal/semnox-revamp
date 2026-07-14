@@ -229,7 +229,7 @@ ${footer}
 `;
 
 // Shared page-top hero for interior pages.
-export const interiorHero = ({ kicker, title, lede, image, tint = "#e8631a", links = [] }) => `
+export const interiorHero = ({ kicker, title, lede, image, tint = "#c65712", links = [] }) => `
     <section class="relative overflow-hidden" style="background-color:${tint}">
       <div class="absolute inset-0">
         <img src="${image}" alt="" class="h-full w-full object-cover object-center mix-blend-multiply opacity-90" fetchpriority="high">

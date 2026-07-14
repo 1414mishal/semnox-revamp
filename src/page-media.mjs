@@ -6,7 +6,7 @@ export const testimonialsBody = interiorHero({
   title: "Operators say it better than we ever could.",
   lede: "From arcade owners to franchise presidents, here is what running on Semnox actually feels like.",
   image: "images/kids-play.jpg",
-  tint: "#e8631a",
+  tint: "#c65712",
   links: [{ href: "contact-us.html", label: "Join them", primary: true }],
 }) + `
     <section class="bg-[#111213] py-14 sm:py-20 lg:py-28">
@@ -65,7 +65,7 @@ export const newsBody = interiorHero({
   title: "Where we've been. Where you'll find us next.",
   lede: "Product launches, partnerships, and the trade show calendar. Semnox exhibits at the industry's biggest events every year.",
   image: "images/hero-alt.jpg",
-  tint: "#e8631a",
+  tint: "#c65712",
 }) + `
     <section class="bg-[#111213] py-14 sm:py-20 lg:py-28">
       <div class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
@@ -185,7 +185,7 @@ export const caseStudiesBody = interiorHero({
   title: "Proof, in production.",
   lede: "Real venues, real numbers, real operators. How the platform performs when the gates open.",
   image: "images/case-grs.jpg",
-  tint: "#e8631a",
+  tint: "#c65712",
 }) + `
     <section class="bg-[#111213] py-14 sm:py-20 lg:py-28">
       <div class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">

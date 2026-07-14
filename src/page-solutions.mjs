@@ -84,7 +84,7 @@ export const fecBody = interiorHero({
   title: "Run your entire entertainment center from one screen.",
   lede: "Arcades, bowling, karting, laser tag, soft play, and parties. Parafait connects cashless play, redemption, bookings, and CRM so guests move faster and spend more.",
   image: "images/hero-fec.jpg",
-  tint: "#e8631a",
+  tint: "#c65712",
   links: [{ href: "contact-us.html", label: "Book a demo", primary: true }, { href: "case-studies.html", label: "See case studies" }],
 }) + featureGrid([
   { icon: "credit-card", name: "Cashless RFID Cards and Wristbands", copy: "Tap to play across games and attractions. Cards roam between your locations, building loyalty at every visit." },

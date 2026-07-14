@@ -53,7 +53,7 @@ const solutionCards = `
         </article>`;
 
 export const homeBody = `
-    <section id="home" class="relative min-h-[100svh] overflow-hidden bg-[#e8631a]">
+    <section id="home" class="relative min-h-[100svh] overflow-hidden bg-[#c65712]">
       <div class="absolute inset-0">
         <img src="images/hero-park.jpg" alt="Guests enjoying an amusement park powered by Semnox" data-hero-image class="h-full w-full scale-[1.07] object-cover object-center mix-blend-multiply" fetchpriority="high">
         <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/45"></div>
@@ -73,7 +73,7 @@ export const homeBody = `
               One connected platform for family entertainment centers, water and theme parks, and food and beverage operations. Ticketing, cashless, POS, CRM, and everything in between.
             </p>
             <div data-hero class="flex translate-y-6 flex-col gap-3 opacity-0 sm:flex-row md:col-span-6 md:justify-end">
-              <a href="#solutions" class="group inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-white px-6 text-sm font-medium text-black transition-colors hover:bg-black hover:text-white focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 focus:ring-offset-[#e8631a]">
+              <a href="#solutions" class="group inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-white px-6 text-sm font-medium text-black transition-colors hover:bg-black hover:text-white focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 focus:ring-offset-[#c65712]">
                 Explore solutions
                 <i data-lucide="arrow-down-right" class="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:translate-y-1"></i>
               </a>

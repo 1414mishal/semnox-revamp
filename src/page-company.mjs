@@ -6,7 +6,7 @@ export const aboutBody = interiorHero({
   title: "Two decades of making entertainment run better.",
   lede: "Semnox is a technology partner to the leisure and hospitality industry, live across 2,800+ sites in 60+ countries, with offices in India, USA, UAE, China, and the UK.",
   image: "images/about-banner.jpg",
-  tint: "#e8631a",
+  tint: "#c65712",
   links: [{ href: "our-team.html", label: "Meet the team", primary: true }, { href: "clients.html", label: "Our clients" }],
 }) + `
     <section class="bg-[#111213] py-14 sm:py-20 lg:py-28">
@@ -80,7 +80,7 @@ export const teamBody = interiorHero({
   title: "A wide range of skills. One shared obsession.",
   lede: "The strength behind Semnox is its people: engineers, implementers, support specialists, and industry veterans across every region we serve.",
   image: "images/hero-alt.jpg",
-  tint: "#e8631a",
+  tint: "#c65712",
   links: [{ href: "careers.html", label: "Join the team", primary: true }],
 }) + `
     <section class="bg-[#111213] py-14 sm:py-20 lg:py-28">
@@ -121,7 +121,7 @@ export const clientsBody = interiorHero({
   title: "400+ operators. 2,800+ venues. One platform.",
   lede: "From single-location arcades to global franchise chains and destination parks, operators everywhere trust Semnox with their busiest days.",
   image: "images/theme-parks.jpg",
-  tint: "#e8631a",
+  tint: "#c65712",
   links: [{ href: "testimonials.html", label: "What they say", primary: true }, { href: "case-studies.html", label: "Case studies" }],
 }) + `
     <section class="bg-[#111213] py-14 sm:py-20 lg:py-28">
@@ -195,7 +195,7 @@ export const associationsBody = interiorHero({
   title: "Active members of the industry we serve.",
   lede: "Semnox participates in the leading amusement, leisure, and attractions associations around the world, staying close to where the industry is heading.",
   image: "images/museum.jpg",
-  tint: "#e8631a",
+  tint: "#c65712",
 }) + `
     <section class="bg-[#111213] py-14 sm:py-20 lg:py-28">
       <div class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">

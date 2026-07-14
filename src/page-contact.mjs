@@ -6,7 +6,7 @@ export const contactBody = interiorHero({
   title: "Talk to a human. Get a real answer.",
   lede: "Sales, support, partnerships, or a live demo. Pick a channel and we will get back to you fast, usually within two working days.",
   image: "images/hero-fec.jpg",
-  tint: "#e8631a",
+  tint: "#c65712",
 }) + `
     <section class="bg-[#111213] py-14 sm:py-20 lg:py-28">
       <div class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
